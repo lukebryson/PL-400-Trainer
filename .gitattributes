@@ -1,0 +1,12 @@
+# The pipeline guarantees byte-identical output across reruns, and that guarantee
+# has to survive a clone on Windows. Without this, autocrlf rewrites line endings
+# on checkout and every stage appears to produce a diff on first run.
+* text=auto eol=lf
+
+# Generated bank and extracted media: never touch these.
+src/data/questions.json -text
+*.png binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.docx binary

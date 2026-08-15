@@ -1,0 +1,20 @@
+# Source documents — 75 MB, must be present locally to run the pipeline
+references/docs/*.pdf
+references/docs/*.docx
+
+# Pipeline intermediates — regenerate with `python pipeline/0N_*.py`
+pipeline/out/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+*.local
+
+# Lavish review artefacts
+.lavish/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
