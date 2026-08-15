@@ -366,7 +366,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1ca649e589cd57aa",
+      "contentHash": "ebf8ba8bfb0f7bf5",
       "correct": [
         "D"
       ],
@@ -437,7 +437,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9e425de1ed42780e",
+      "contentHash": "fb43fc11aaad92e0",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -488,7 +488,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8a111ee3e230bbd9",
+      "contentHash": "e8a4c0d659f0526a",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -523,7 +523,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c5e47a88d852f87f",
+      "contentHash": "9dc85c794097ed81",
       "correct": [
         "C",
         "D"
@@ -574,7 +574,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1a6670d3b1dfefff",
+      "contentHash": "4d7db6a08b872aad",
       "correct": [
         "A",
         "B"
@@ -637,7 +637,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "00d194db07f474f4",
+      "contentHash": "fdeb0ae36de83f83",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -677,7 +677,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "12b4640e4a5498f7",
+      "contentHash": "2160012ed6b3a44f",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -707,7 +707,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8df7f122138da9a4",
+      "contentHash": "6a62e02338b21bb0",
       "correct": [
         "B"
       ],
@@ -763,7 +763,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "28991d47d97e3d2c",
+      "contentHash": "e802ca13fe282f70",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -799,7 +799,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ab64e4da3237483a",
+      "contentHash": "90043f7c30b3d24e",
       "correct": [
         "B",
         "C",
@@ -854,7 +854,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "564a0edbce2efd5e",
+      "contentHash": "8bf3927e7d932866",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -890,7 +890,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "83d29636d5b52063",
+      "contentHash": "b4bcbd7342373910",
       "correct": [
         "C"
       ],
@@ -940,7 +940,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5e1b2ed9f817fd08",
+      "contentHash": "2f2d2ee0870451b0",
       "correct": [
         "A",
         "D"
@@ -990,7 +990,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "daf6b0867c73e61c",
+      "contentHash": "64f19e3bcb7f7785",
       "correct": [
         "A"
       ],
@@ -1053,7 +1053,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "907330a6a048c5ce",
+      "contentHash": "99941153bb3c8a1a",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -1087,7 +1087,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2de850c0cc1bd8ea",
+      "contentHash": "30da11067533a7c9",
       "correct": [
         "A"
       ],
@@ -1141,7 +1141,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e5bf1bbf65e051e3",
+      "contentHash": "015adf73cd46a5d8",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -1173,7 +1173,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c4af938155fac50c",
+      "contentHash": "0be37f111507c89a",
       "correct": [
         "B",
         "E"
@@ -1223,7 +1223,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6d6972b03661ddfa",
+      "contentHash": "9650bf3135ea847b",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -1255,7 +1255,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c2937653f88a1062",
+      "contentHash": "687173c2504dd660",
       "correct": [
         "C"
       ],
@@ -1301,7 +1301,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "264258be6600c742",
+      "contentHash": "d47b421c12732e1d",
       "correct": [
         "D"
       ],
@@ -1346,7 +1346,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a83b440cd449f1f9",
+      "contentHash": "2efc736e6a94091b",
       "correct": [
         "B"
       ],
@@ -1392,7 +1392,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c957fc611e36e7dd",
+      "contentHash": "6789d0477842fa4d",
       "correct": [
         "D"
       ],
@@ -1437,7 +1437,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ca502ba6a8f33815",
+      "contentHash": "cbfd8928dc92956e",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -1469,7 +1469,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-e0f08627dbac",
       "codeBlock": null,
-      "contentHash": "e26db72899234893",
+      "contentHash": "b22d77618a0da9e2",
       "correct": [
         "A"
       ],
@@ -1516,7 +1516,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-1019c0e6dbf0",
       "codeBlock": null,
-      "contentHash": "e26db72899234893",
+      "contentHash": "85948eba4de84e26",
       "correct": [
         "B"
       ],
@@ -1562,7 +1562,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-9bdec16e2aa4",
       "codeBlock": null,
-      "contentHash": "b888af6a322072fa",
+      "contentHash": "688518e6df386a75",
       "correct": [
         "B"
       ],
@@ -1609,7 +1609,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a073f67657ae6163",
+      "contentHash": "f9da62fa2704079b",
       "correct": [
         "B"
       ],
@@ -1656,7 +1656,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8643f9ec870e0028",
+      "contentHash": "8164317789559dd3",
       "correct": [
         "B"
       ],
@@ -1694,7 +1694,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f7649da938d1f3e",
+      "contentHash": "401d3f733c69d654",
       "correct": [
         "B"
       ],
@@ -1731,7 +1731,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f4a56a31a937872c",
+      "contentHash": "649a0d91473baeef",
       "correct": [
         "A"
       ],
@@ -1771,7 +1771,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b715a268e042057a",
+      "contentHash": "981a996b1cd4b3ad",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -1803,7 +1803,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "41dc772854df3c08",
+      "contentHash": "dd86e2530cb16019",
       "correct": [
         "B"
       ],
@@ -1843,7 +1843,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1b26c9af9c9f8608",
+      "contentHash": "5e05cb32ea1a1fd1",
       "correct": [
         "D"
       ],
@@ -1890,7 +1890,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "dc8d7e33e581853f",
+      "contentHash": "626302fca5bb98d8",
       "correct": [
         "B",
         "C",
@@ -1938,7 +1938,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-d69e7e64d18f",
       "codeBlock": null,
-      "contentHash": "62ead1748c5cc64d",
+      "contentHash": "df51ea79e9f62f38",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -1972,7 +1972,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-913604f1675b",
       "codeBlock": null,
-      "contentHash": "ae5f6e1af960d1ed",
+      "contentHash": "2e9da09d032bf90c",
       "correct": [
         "A"
       ],
@@ -2018,7 +2018,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-84407e512ef8",
       "codeBlock": null,
-      "contentHash": "ac26e275e5ab5f03",
+      "contentHash": "e84bba770de51c11",
       "correct": [
         "B"
       ],
@@ -2065,7 +2065,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6e12294a69e43b61",
+      "contentHash": "18c00931e09d1240",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -2097,7 +2097,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0c0b372882d34d1c",
+      "contentHash": "a38279baec12fe84",
       "correct": [
         "B",
         "D"
@@ -2144,7 +2144,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "eddf6262014f97ec",
+      "contentHash": "653258c26a7dd6cd",
       "correct": [
         "B",
         "D"
@@ -2194,7 +2194,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4724a0fbb46dc06b",
+      "contentHash": "9eaa878ba8b8799c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -2227,7 +2227,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "cb608e8efb6d1fa5",
+      "contentHash": "35e969fc824fa3f4",
       "correct": [
         "C"
       ],
@@ -2275,7 +2275,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5c47618460fe7c20",
+      "contentHash": "0b1832366464b4a9",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -2307,7 +2307,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "422e0c0c5280bef1",
+      "contentHash": "456f2d94cf5bfda9",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -2341,7 +2341,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "04720e2aa4bbbcd6",
+      "contentHash": "da00530b443e46ff",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -2373,7 +2373,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "13693fbe24f0c6f9",
+      "contentHash": "eae11cdb3d24f85c",
       "correct": [
         "A"
       ],
@@ -2414,7 +2414,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c00cf112dc926d6b",
+      "contentHash": "9feacd984876edd5",
       "correct": [
         "B"
       ],
@@ -2456,7 +2456,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c7f5dc5b0fbe6a36",
+      "contentHash": "803d78ca05e113d6",
       "correct": [
         "A"
       ],
@@ -2506,7 +2506,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a91083b8926258f7",
+      "contentHash": "71a272de0ac5bcb8",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2541,7 +2541,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d2bf72fa20befe68",
+      "contentHash": "90c8930f7edcdad9",
       "correct": [
         "B",
         "D",
@@ -2617,7 +2617,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "54df2346bc2ea494",
+      "contentHash": "11f92f25a970391f",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2662,7 +2662,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "515173c4e2f5abfa",
+      "contentHash": "3c74f39d5f1de6eb",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2696,7 +2696,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e3111cbc018f9094",
+      "contentHash": "a22d8b39588ed930",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2749,7 +2749,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ddce5e958779a74f",
+      "contentHash": "01890df3b9ee63f1",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse.",
@@ -2800,7 +2800,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "99fdfd646b3eeebe",
+      "contentHash": "955395b2ead9b444",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2846,7 +2846,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a99661bdaa4eeab0",
+      "contentHash": "81cbab35e2d7b4e7",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2879,7 +2879,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "272a01822bc04f19",
+      "contentHash": "cd4ae11e070193d5",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -2917,7 +2917,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a6899c1f3a0b5d65",
+      "contentHash": "28bdfc20dea5abf6",
       "correct": [
         "A"
       ],
@@ -2979,7 +2979,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5e414148585c9c9a",
+      "contentHash": "35b73f887547cbd7",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3030,7 +3030,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "de4488d80b47e6db",
+      "contentHash": "68224036f5dcfdeb",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3080,7 +3080,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9bca0147ba162434",
+      "contentHash": "7c1d86bf45af4351",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3114,7 +3114,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b2305e0b56bb8758",
+      "contentHash": "1563e57336284132",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3158,7 +3158,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a87de82f3b1ab401",
+      "contentHash": "5d4101f5d3e63caf",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3193,7 +3193,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bf06eba8d2191373",
+      "contentHash": "8a98209afffa4850",
       "correct": [
         "A",
         "B"
@@ -3243,7 +3243,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0e412e88f3af5bc6",
+      "contentHash": "f8ae60c65ef5d595",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3279,7 +3279,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2e341df35d51dbc7",
+      "contentHash": "3fa72c628709bb6e",
       "correct": [
         "B"
       ],
@@ -3328,7 +3328,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e584cac36b6252b9",
+      "contentHash": "1ab4cd6c221a30e1",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3363,7 +3363,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d9dcfabd0eeaa35a",
+      "contentHash": "533c3fd5deffbcbd",
       "correct": [
         "C"
       ],
@@ -3426,7 +3426,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "33bdd4eed679d983",
+      "contentHash": "21370c2c26d36a03",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3460,7 +3460,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ae88202d4abb4548",
+      "contentHash": "57e4bdc98f5601f1",
       "correct": [
         "B"
       ],
@@ -3510,7 +3510,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f1a437745ec72940",
+      "contentHash": "795b59cb568a2e4f",
       "correct": [
         "C",
         "D",
@@ -3576,7 +3576,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "652c7c4cb656bd4e",
+      "contentHash": "0b1eac954517f56b",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3610,7 +3610,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0f5a5808a3759417",
+      "contentHash": "525b322bb4b2db32",
       "correct": [
         "D"
       ],
@@ -3660,7 +3660,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "53d014a2e3a7deff",
+      "contentHash": "11c81ca5d4a59630",
       "correct": [
         "B"
       ],
@@ -3706,7 +3706,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "749a7413f9b919cc",
+      "contentHash": "d49f0803d5bd0e54",
       "correct": [
         "C"
       ],
@@ -3755,7 +3755,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b67875a678b89890",
+      "contentHash": "6de1db1c958d1154",
       "correct": [
         "A",
         "C"
@@ -3815,7 +3815,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e22f290746153fbc",
+      "contentHash": "cd14ffec420434a2",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3862,7 +3862,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "74e0078de8cf8c16",
+      "contentHash": "247cf21cc39cecb5",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -3896,7 +3896,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3fe61a3b48961f84",
+      "contentHash": "a345ec34ed7d08b3",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -3929,7 +3929,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4714e38a5c03ef69",
+      "contentHash": "a4ea7709e0f3bdba",
       "correct": [
         "D"
       ],
@@ -3975,7 +3975,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a57b46fd86a79517",
+      "contentHash": "31b92ab79509ee3b",
       "correct": [
         "D"
       ],
@@ -4020,7 +4020,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4d560e54b61ac8d4",
+      "contentHash": "6f9bb5039c6e0c60",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4067,7 +4067,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ce69c6aaae2b23de",
+      "contentHash": "ea303490dd30cd59",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4101,7 +4101,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "32dfe6fabb54e15b",
+      "contentHash": "f86dcd8658232796",
       "correct": [
         "C"
       ],
@@ -4143,7 +4143,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9f910ebcf28966a4",
+      "contentHash": "715288488fa8e34d",
       "correct": [
         "B"
       ],
@@ -4192,7 +4192,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0fffae78e4b83db4",
+      "contentHash": "0f3851b0897977c7",
       "correct": [
         "B"
       ],
@@ -4238,7 +4238,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7b49f68d2a31ccd9",
+      "contentHash": "520d56530d2333af",
       "correct": [
         "B"
       ],
@@ -4285,7 +4285,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-eb7d4a27ee8c",
       "codeBlock": null,
-      "contentHash": "bdcb6986aa7b5567",
+      "contentHash": "f6fb8415a0a54f62",
       "correct": [
         "B",
         "C"
@@ -4333,7 +4333,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a30d95ac99ca",
       "codeBlock": null,
-      "contentHash": "886222ba2b1ae2d0",
+      "contentHash": "3b0da2cccf22c6cd",
       "correct": [
         "B"
       ],
@@ -4380,7 +4380,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-de05356c6417",
       "codeBlock": null,
-      "contentHash": "f8446d3fb03cb259",
+      "contentHash": "c9b490e5965afb7c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4413,7 +4413,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-9bdec16e2aa4",
       "codeBlock": null,
-      "contentHash": "f2090649fed29abe",
+      "contentHash": "2fbb5c5f40593d55",
       "correct": [
         "C"
       ],
@@ -4460,7 +4460,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e9f812f958866b",
+      "contentHash": "f4d0c011cafe11ca",
       "correct": [
         "D"
       ],
@@ -4505,7 +4505,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2c3133d80e9b6fb8",
+      "contentHash": "a4b5db0d96e46e61",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4539,7 +4539,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "baef1a779d771b93",
+      "contentHash": "6c782693a5f45f55",
       "correct": [
         "C"
       ],
@@ -4580,7 +4580,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bf158fcf6ad65e3a",
+      "contentHash": "03ba45279a97e249",
       "correct": [
         "B"
       ],
@@ -4628,7 +4628,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e91cc687e4a093a0",
+      "contentHash": "3cd0a38d2c6ebf27",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4659,7 +4659,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ce8080f8c101ce7d",
+      "contentHash": "104cdd2991518c59",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4692,7 +4692,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "26fd36f862c74d86",
+      "contentHash": "7888bd20e6345d9c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4724,7 +4724,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e932f6dfc14c1cce",
+      "contentHash": "72bcaecd2d1dd8cb",
       "correct": [
         "B"
       ],
@@ -4761,7 +4761,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2a1eb8758a7491ce",
+      "contentHash": "86f2e9f1bad234f7",
       "correct": [
         "B"
       ],
@@ -4799,7 +4799,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ad5cbaeac2170cf3",
+      "contentHash": "faecc1e6af62c207",
       "correct": [
         "B"
       ],
@@ -4836,7 +4836,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c4b8785d471c8075",
+      "contentHash": "0b0891892727c46b",
       "correct": [
         "B"
       ],
@@ -4874,7 +4874,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-ee3884b7148f",
       "codeBlock": null,
-      "contentHash": "ba64a3ee71c49686",
+      "contentHash": "40e022474332a38e",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4908,7 +4908,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-60aaed2c395b",
       "codeBlock": null,
-      "contentHash": "c65f9df717f963be",
+      "contentHash": "f791ee51b74103fc",
       "correct": [
         "C"
       ],
@@ -4955,7 +4955,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-717dd4325030",
       "codeBlock": null,
-      "contentHash": "52eb1d3a2393e356",
+      "contentHash": "576ea97b4516042b",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -4988,7 +4988,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3b425e97990ef810",
+      "contentHash": "1df2da380f711e85",
       "correct": [
         "A",
         "C"
@@ -5035,7 +5035,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5a4a10a81bc9e6f2",
+      "contentHash": "857be562b9e3ebc4",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5066,7 +5066,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "224375cd6a7e4ca8",
+      "contentHash": "3a8703fe396e91c2",
       "correct": [
         "B"
       ],
@@ -5112,7 +5112,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6237a5b5e5cd1664",
+      "contentHash": "e02cea9f42ed249d",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5144,7 +5144,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "cbe51796cf182b81",
+      "contentHash": "05d23fb0a8b750be",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5176,7 +5176,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "516eb836b8ab5e22",
+      "contentHash": "30c2393829913918",
       "correct": [
         "D"
       ],
@@ -5221,7 +5221,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "123b40b5fd0a81b2",
+      "contentHash": "2591c2ace8f93e06",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5253,7 +5253,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "39804593518231bc",
+      "contentHash": "95d59e66e09576c5",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5285,7 +5285,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5f1538baafeec0d3",
+      "contentHash": "8122463fc71ca274",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5318,7 +5318,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7fec138f19839c5d",
+      "contentHash": "115713b9118cdaff",
       "correct": [
         "D"
       ],
@@ -5363,7 +5363,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "71eed33fda5931f1",
+      "contentHash": "f357f724055f5f74",
       "correct": [
         "D"
       ],
@@ -5409,7 +5409,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "51be1ef1b2a777e2",
+      "contentHash": "eae928e6a33537a7",
       "correct": [
         "A",
         "B",
@@ -5461,7 +5461,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "904892820047a253",
+      "contentHash": "f90a43a45dfd37b6",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5493,7 +5493,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "112a97a719b48765",
+      "contentHash": "f698e402634d072b",
       "correct": [
         "D"
       ],
@@ -5542,7 +5542,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "473ee9a5ef23c40f",
+      "contentHash": "5392dbb88e4878b8",
       "correct": [
         "A"
       ],
@@ -5588,7 +5588,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e58984884659d4e3",
+      "contentHash": "40aa47fb85dc2413",
       "correct": [
         "B"
       ],
@@ -5655,7 +5655,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6d15b371a8210d03",
+      "contentHash": "fa394ed604919833",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -5691,7 +5691,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1a8075bc4bdc5311",
+      "contentHash": "3fc5d4f8621333af",
       "correct": [
         "A"
       ],
@@ -5738,7 +5738,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "41c5011fa24c331f",
+      "contentHash": "cf29373d6540c550",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -5772,7 +5772,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "75bfa287b7e5a409",
+      "contentHash": "50a48e17e2ad630f",
       "correct": [
         "C"
       ],
@@ -5831,7 +5831,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1ee6af56bbf3f6f6",
+      "contentHash": "2434d81905a5a54f",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -5865,7 +5865,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b4d5eb9e0b3f05f6",
+      "contentHash": "1e46ade682455c5f",
       "correct": [
         "B"
       ],
@@ -5928,7 +5928,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bbea6722c7c2d132",
+      "contentHash": "b979b9e48ef91c3f",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -5981,7 +5981,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4d238268d953aa32",
+      "contentHash": "c9cc14835073ad5c",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6016,7 +6016,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a919b0ebc7c911a9",
+      "contentHash": "0f64cea089442f86",
       "correct": [
         "C"
       ],
@@ -6078,7 +6078,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "239f0e00262b15b3",
+      "contentHash": "4edc4f954aaff55e",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6113,7 +6113,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "dc3169aba9e53b07",
+      "contentHash": "9547b67eafe37349",
       "correct": [
         "A",
         "B",
@@ -6182,7 +6182,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5caacff0540ee28a",
+      "contentHash": "e805c22108385029",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6218,7 +6218,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e0a836347e57120f",
+      "contentHash": "724b4a9df9c3f416",
       "correct": [
         "D"
       ],
@@ -6280,7 +6280,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1ee6af56bbf3f6f6",
+      "contentHash": "475374eadc8a7d06",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6323,7 +6323,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "652c7c4cb656bd4e",
+      "contentHash": "77a50ba6feda5ca6",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6360,7 +6360,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3600d14b511c9a23",
+      "contentHash": "f033c612f8a5a713",
       "correct": [
         "A"
       ],
@@ -6422,7 +6422,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ca2fc836144b8c79",
+      "contentHash": "20af764d2f441767",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6468,7 +6468,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bc7c9caa433a60cb",
+      "contentHash": "8c2d11602e54d5c7",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6520,7 +6520,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4a0efd5fdb61cbb1",
+      "contentHash": "adec932d006a9df0",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -6552,7 +6552,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6e11450713b951cb",
+      "contentHash": "063be230c99ee220",
       "correct": [
         "A",
         "B"
@@ -6618,7 +6618,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3fc5812466d078b2",
+      "contentHash": "591438116bd295d9",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6652,7 +6652,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "cf901a13d3d21b41",
+      "contentHash": "044229c06c0b0932",
       "correct": [
         "B",
         "C",
@@ -6724,7 +6724,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e022dcd5b94d09c2",
+      "contentHash": "04db27a6388e8b95",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6761,7 +6761,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3dbd44cc0d36b9d7",
+      "contentHash": "f1efb305628d6116",
       "correct": [
         "A",
         "D",
@@ -6815,7 +6815,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "491adac327cef449",
+      "contentHash": "d5073d9044ea8e57",
       "correct": [
         "B",
         "D"
@@ -6870,7 +6870,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a31a1d448e77b051",
+      "contentHash": "639fe5c66e6dc8f7",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -6906,7 +6906,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1a03b6f2829f3baa",
+      "contentHash": "95d1e91c63da1309",
       "correct": [
         "B",
         "D"
@@ -6961,7 +6961,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a6d0ff95e88391fc",
+      "contentHash": "c7d3d067571900bc",
       "correct": [
         "D"
       ],
@@ -7010,7 +7010,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b76f9dca3e45ee8d",
+      "contentHash": "172baa9697422f8f",
       "correct": [
         "B"
       ],
@@ -7056,7 +7056,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "12deee2e73b31384",
+      "contentHash": "3d8258c427f5c7ee",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -7102,7 +7102,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f5228f468b7cbbdb",
+      "contentHash": "f95cfd52ec6be7df",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -7140,7 +7140,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "84eb58f80a24e272",
+      "contentHash": "1666b2356317fe32",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -7176,7 +7176,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e81236f7ecfcf04e",
+      "contentHash": "82431440af280c76",
       "correct": [
         "D"
       ],
@@ -7229,7 +7229,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "302bd5eb7d649265",
+      "contentHash": "72186239f2d108e8",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7262,7 +7262,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6655d8df2c2b9a28",
+      "contentHash": "c11f24d11f74a0d0",
       "correct": [
         "A",
         "E"
@@ -7312,7 +7312,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "da4fab8d7011f62d",
+      "contentHash": "f75bf93a04012794",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7345,7 +7345,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "73defaf08b637657",
+      "contentHash": "2bdbdb590bdd224e",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7379,7 +7379,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-2397c207291c",
       "codeBlock": null,
-      "contentHash": "4aa14f74b307d01c",
+      "contentHash": "3057e161944bc802",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7413,7 +7413,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-c9fecd4fd711",
       "codeBlock": null,
-      "contentHash": "36a7cf0bcdf9561b",
+      "contentHash": "a2c23efc699a32b9",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7448,7 +7448,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-8b70febcad0d",
       "codeBlock": null,
-      "contentHash": "a56811622585cd0f",
+      "contentHash": "34cd4a540f373e34",
       "correct": [
         "C"
       ],
@@ -7494,7 +7494,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "31dffc7470efd0e7",
+      "contentHash": "8e5e71b345b52892",
       "correct": [
         "B",
         "C",
@@ -7545,7 +7545,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a919b0ebc7c911a9",
+      "contentHash": "ceb776be10777dfd",
       "correct": [
         "C"
       ],
@@ -7591,7 +7591,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e9fd0d86104db7b8",
+      "contentHash": "ed2640a71da74194",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7623,7 +7623,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7dc195e546396db1",
+      "contentHash": "263ecf306dc845d6",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7657,7 +7657,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a919b0ebc7c911a9",
+      "contentHash": "926c0de7e5d3a889",
       "correct": [
         "A"
       ],
@@ -7702,7 +7702,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0c05f27b6075d1e0",
+      "contentHash": "1128a8946d139e1c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7734,7 +7734,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2d71d912cbf324e3",
+      "contentHash": "7216f26c68f4f31b",
       "correct": [
         "C"
       ],
@@ -7780,7 +7780,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6adfd23269c8a933",
+      "contentHash": "01b43589f24de1cb",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7813,7 +7813,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8318e655b8a7a01b",
+      "contentHash": "708221a179c446a3",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -7845,7 +7845,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a007a28db511f3cf",
+      "contentHash": "3a6763c160ac0504",
       "correct": [
         "A"
       ],
@@ -7891,7 +7891,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e0503a382e43fc94",
+      "contentHash": "fc12a07adf990b69",
       "correct": [
         "B"
       ],
@@ -7932,7 +7932,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5df11a2f1efbd6dc",
+      "contentHash": "652d8cacec372ecc",
       "correct": [
         "B"
       ],
@@ -7970,7 +7970,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8be22e1db49cf2c5",
+      "contentHash": "1943bca74bc17a95",
       "correct": [
         "B"
       ],
@@ -8010,7 +8010,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3a608c3a393686b4",
+      "contentHash": "b05ea5e3d9b6e402",
       "correct": [
         "A"
       ],
@@ -8048,7 +8048,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9b7e3649f552a467",
+      "contentHash": "8e929515b2585588",
       "correct": [
         "C"
       ],
@@ -8098,7 +8098,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "10d412056bc26c46",
+      "contentHash": "71cd3ede39867371",
       "correct": [
         "C"
       ],
@@ -8160,7 +8160,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f0dd5669b1c97c8",
+      "contentHash": "5cb4680c7971c207",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -8209,7 +8209,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4592c871d61a1e6b",
+      "contentHash": "16d0d9ad0c03d7ee",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -8243,7 +8243,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4caf7615824340d4",
+      "contentHash": "d169cc7dc9c94fa1",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -8279,7 +8279,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "87c6d0b79a4eb884",
+      "contentHash": "6c7c7b2a1b1db7d0",
       "correct": [
         "H"
       ],
@@ -8347,7 +8347,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b776935848aa4ffd",
+      "contentHash": "afe601a0d8f165ed",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -8390,7 +8390,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "36a422a49a856cec",
+      "contentHash": "ae5dc98d6b8b397f",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -8432,7 +8432,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bb517db6394b0b29",
+      "contentHash": "8deda485c010918b",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -8466,7 +8466,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7cb990fff1cec6ad",
+      "contentHash": "c0f18c4d3ea26a96",
       "correct": [
         "B",
         "C"
@@ -8517,7 +8517,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "705323fc48ef3f79",
+      "contentHash": "101ea74d179b0e3b",
       "correct": [
         "D"
       ],
@@ -8566,7 +8566,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5c966b1c2fee8a3c",
+      "contentHash": "9e36f4f2188fa7f5",
       "correct": [
         "A"
       ],
@@ -8612,7 +8612,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7ffcafc63f1bddeb",
+      "contentHash": "949fa81cb9a50a73",
       "correct": [
         "A",
         "E"
@@ -8666,7 +8666,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "10d81e75d45cdad7",
+      "contentHash": "a4d26639e5b16f3e",
       "correct": [
         "A"
       ],
@@ -8720,7 +8720,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9656f0768ca845fe",
+      "contentHash": "9264dd22dc55a80a",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -8763,7 +8763,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1efb348c4b6d8e3e",
+      "contentHash": "e39622d93a90d6d3",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -8800,7 +8800,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "88c5607a713d66ed",
+      "contentHash": "a3bd14e109727208",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -8848,7 +8848,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8444ffba0772b060",
+      "contentHash": "d5f4c9d6070e21c0",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -8896,7 +8896,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0a5062dfc5137175",
+      "contentHash": "53578326be571dbb",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -8927,7 +8927,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8cebd4a52a1332d5",
+      "contentHash": "9296f89eaf7774f3",
       "correct": [
         "A",
         "D"
@@ -8978,7 +8978,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e9f812f958866b",
+      "contentHash": "c577af7f0adb8b2b",
       "correct": [
         "D"
       ],
@@ -9024,7 +9024,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d5fd93c9a5c45683",
+      "contentHash": "880d81dc14bb21ee",
       "correct": [
         "A",
         "D"
@@ -9070,7 +9070,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d9608fb128d7d18e",
+      "contentHash": "70c653f354d6b6ab",
       "correct": [
         "D"
       ],
@@ -9116,7 +9116,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e9f812f958866b",
+      "contentHash": "7d41f1ce8c909f6e",
       "correct": [
         "D"
       ],
@@ -9161,7 +9161,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "189b7426686c3ffe",
+      "contentHash": "797bff3ad2369951",
       "correct": [
         "C"
       ],
@@ -9206,7 +9206,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "81e9c99b3c77c55a",
+      "contentHash": "c537a3d76e150b75",
       "correct": [
         "B",
         "C"
@@ -9253,7 +9253,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "27f0d6d81c3bc097",
+      "contentHash": "cf86e4a4fb771f16",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9287,7 +9287,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "88f939da02f83884",
+      "contentHash": "7bb1e3258e5f3305",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9317,7 +9317,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e9f812f958866b",
+      "contentHash": "1156ea2aa7d62c52",
       "correct": [
         "B"
       ],
@@ -9365,7 +9365,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-72b1d5cdd3f6",
       "codeBlock": null,
-      "contentHash": "d03d904b487343d9",
+      "contentHash": "965b9c96e6c8f8dd",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9398,7 +9398,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e9f812f958866b",
+      "contentHash": "d6225cba197e2900",
       "correct": [
         "C"
       ],
@@ -9444,7 +9444,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c9ae20a1d152bfca",
+      "contentHash": "0c7a8add7b6f1145",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9478,7 +9478,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-febe79bc8b1d",
       "codeBlock": null,
-      "contentHash": "5a5d11ffd5780d87",
+      "contentHash": "eec48fd6432ad2f6",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9511,7 +9511,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-c1aee15a5c61",
       "codeBlock": null,
-      "contentHash": "fa9c2fd8a7d59273",
+      "contentHash": "1c5a48cd6b19720c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9544,7 +9544,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8808ee5b3666f84d",
+      "contentHash": "8693fcb77b653964",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9576,7 +9576,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ded12a79815e6635",
+      "contentHash": "6cdea2708978acc5",
       "correct": [
         "B"
       ],
@@ -9621,7 +9621,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0f29f030298283b9",
+      "contentHash": "9d3e0ed20acfe29d",
       "correct": [
         "C"
       ],
@@ -9667,7 +9667,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "864674bed2f97ec1",
+      "contentHash": "7145f0df22efba33",
       "correct": [
         "A",
         "D"
@@ -9718,7 +9718,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bd534f8f7b54d849",
+      "contentHash": "e53bcbd896c4eb56",
       "correct": [
         "C",
         "E"
@@ -9773,7 +9773,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "53cb331c21839b9f",
+      "contentHash": "c328577992e24ce1",
       "correct": [
         "A"
       ],
@@ -9818,7 +9818,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f9bb372a5b58191c",
+      "contentHash": "b7fc1499d467b098",
       "correct": [
         "A"
       ],
@@ -9878,7 +9878,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ed264bae9f490b11",
+      "contentHash": "627b7b5bc0bb5011",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -9928,7 +9928,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6321bdf80febb718",
+      "contentHash": "947adfc8b7a08af4",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -9979,7 +9979,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9cda02c0c3128c8d",
+      "contentHash": "9f42c0ee991956da",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10016,7 +10016,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7ee529aacc295c72",
+      "contentHash": "01964e757c289bc5",
       "correct": [
         "A",
         "D"
@@ -10077,7 +10077,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ffc10d83966ad846",
+      "contentHash": "107d56b82be207e4",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10111,7 +10111,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ed5b4915d9a2f6f5",
+      "contentHash": "fb6bc154d54482b2",
       "correct": [
         "C"
       ],
@@ -10168,7 +10168,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8256b9cef58f54ac",
+      "contentHash": "635ac9099831ced9",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10215,7 +10215,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ea16275125319570",
+      "contentHash": "064520c8a37d0f3e",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10252,7 +10252,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "795c9be231746af4",
+      "contentHash": "81165edb351daaae",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -10288,7 +10288,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "222637984e67a114",
+      "contentHash": "181bbaf6f5032a6c",
       "correct": [
         "A"
       ],
@@ -10326,7 +10326,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e92f619da75a9425",
+      "contentHash": "3316ba6a54be1881",
       "correct": [
         "B"
       ],
@@ -10368,7 +10368,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d018df9cf150587f",
+      "contentHash": "69a95e695cd0255a",
       "correct": [
         "A"
       ],
@@ -10430,7 +10430,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "84f76e0c95b5a24d",
+      "contentHash": "5f71f7ea90c2150a",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10475,7 +10475,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "473fa50a8e44878a",
+      "contentHash": "265fb5430bfb23c2",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10509,7 +10509,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "700c2d858da1109f",
+      "contentHash": "35b4c2a748966308",
       "correct": [
         "D"
       ],
@@ -10565,7 +10565,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bdfe084bb7b61c6c",
+      "contentHash": "5f2b4aff83625a5a",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10601,7 +10601,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "90e5a0bb7fdf877e",
+      "contentHash": "2c579dd52982431d",
       "correct": [
         "A"
       ],
@@ -10642,7 +10642,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b26a66d2561f43ca",
+      "contentHash": "f52cb2bc635900f1",
       "correct": [
         "A"
       ],
@@ -10684,7 +10684,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d375329ecad22c55",
+      "contentHash": "73e617b364f68bff",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10719,7 +10719,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ba11c3295d428c92",
+      "contentHash": "4e70de4db17de30e",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10754,7 +10754,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "03621f1c939dd6c4",
+      "contentHash": "7aca0a8b76de15ec",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10792,7 +10792,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "efdbf62f05490fa8",
+      "contentHash": "175c8edb3b0932f3",
       "correct": [
         "C"
       ],
@@ -10854,7 +10854,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f5f7727c46c89424",
+      "contentHash": "5c499ff55f52eae0",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10907,7 +10907,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "9cb3e12e94d7191b",
+      "contentHash": "691a191de8e90808",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -10949,7 +10949,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "32dfe6fabb54e15b",
+      "contentHash": "4db03ef53caca989",
       "correct": [
         "B"
       ],
@@ -10998,7 +10998,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e57541cba915e5",
+      "contentHash": "6be77db372c1e6b1",
       "correct": [
         "B"
       ],
@@ -11054,7 +11054,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2fba5206b6e055ee",
+      "contentHash": "defb643083f5bd35",
       "correct": [
         "C"
       ],
@@ -11100,7 +11100,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b47daadcab3d8a49",
+      "contentHash": "6291e6b096c5109f",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11132,7 +11132,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f445a8e8f57421af",
+      "contentHash": "423c9ca0e852a21a",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11164,7 +11164,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7ee529aacc295c72",
+      "contentHash": "d900a87620190792",
       "correct": [
         "A",
         "D"
@@ -11223,7 +11223,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "56eb67d280b3d858",
+      "contentHash": "85367debf230291d",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11255,7 +11255,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "fecdce258f3fce4c",
+      "contentHash": "bde388c25b3a7b8c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11286,7 +11286,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-0d704394e69a",
       "codeBlock": null,
-      "contentHash": "8cfd357aac1b30fa",
+      "contentHash": "5bbcc638151e3655",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11321,7 +11321,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a30d95ac99ca",
       "codeBlock": null,
-      "contentHash": "591d2a493e30f552",
+      "contentHash": "a09dd298984c4aed",
       "correct": [
         "B"
       ],
@@ -11370,7 +11370,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-6b9e1b97174c",
       "codeBlock": null,
-      "contentHash": "afd0961990ee4186",
+      "contentHash": "b32545cb38307cfc",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11404,7 +11404,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-0175cbc9c362",
       "codeBlock": null,
-      "contentHash": "7a7ee18e1a80ee21",
+      "contentHash": "703db9ab60c3e8bd",
       "correct": [
         "C",
         "D"
@@ -11456,7 +11456,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-f3ceeed5bee3",
       "codeBlock": null,
-      "contentHash": "8b3b5f386f904e0f",
+      "contentHash": "45574ca523c140c2",
       "correct": [
         "D"
       ],
@@ -11503,7 +11503,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-e6ccaed23c0d",
       "codeBlock": null,
-      "contentHash": "a3e953ec4d5de285",
+      "contentHash": "4438de47f9f62c2d",
       "correct": [
         "D"
       ],
@@ -11549,7 +11549,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-733d1c370a73",
       "codeBlock": null,
-      "contentHash": "2392150617044c95",
+      "contentHash": "f015f929a9e13c6c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11582,7 +11582,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ef3c8392762a3bfd",
+      "contentHash": "08adeeeacdc7cd41",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11616,7 +11616,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "978eface725d1a76",
+      "contentHash": "86e94d65650e069a",
       "correct": [
         "B"
       ],
@@ -11663,7 +11663,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e205c30f61b63805",
+      "contentHash": "a3a6d1c4eabaea21",
       "correct": [
         "D"
       ],
@@ -11711,7 +11711,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d8b7351aeeca5e17",
+      "contentHash": "46ae85d45cfc5059",
       "correct": [
         "C"
       ],
@@ -11756,7 +11756,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "728f1a7893e9fbad",
+      "contentHash": "f611abe0b0ca38e0",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11789,7 +11789,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "139d3f0b5bd4e61e",
+      "contentHash": "e9c84b436fcc8151",
       "correct": [
         "D"
       ],
@@ -11837,7 +11837,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-58e48320e101",
       "codeBlock": null,
-      "contentHash": "2ce85ffb8fade382",
+      "contentHash": "094e299960359b05",
       "correct": [
         "B",
         "D"
@@ -11884,7 +11884,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "dbc1d5b7d114329d",
+      "contentHash": "b4a13db77b3088d8",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11916,7 +11916,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3eb7653507165db",
+      "contentHash": "a2cb0c2183ae204a",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11948,7 +11948,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f7be949ea7a73c3b",
+      "contentHash": "9cd52e7ccfd25f41",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -11978,7 +11978,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "219cb9d0b08fff19",
+      "contentHash": "637b6a034e26809e",
       "correct": [
         "A"
       ],
@@ -12024,7 +12024,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2350575c05f26b54",
+      "contentHash": "f0524b4e1ab67b3e",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -12056,7 +12056,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2d1e006a57062a52",
+      "contentHash": "f1560491dcea9ff8",
       "correct": [
         "B"
       ],
@@ -12106,7 +12106,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ad3a644415c9fe81",
+      "contentHash": "e766624f4c15754c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -12139,7 +12139,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "19d61a63aae0b0e5",
+      "contentHash": "6f76b14ccc2246bf",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -12171,7 +12171,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d28fa12874c57cf7",
+      "contentHash": "a12dc787c811ed2a",
       "correct": [
         "A",
         "D",
@@ -12243,7 +12243,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "13e99fdc4b45f541",
+      "contentHash": "705a6ff04a18ac8c",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12291,7 +12291,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3fbdf953f1eb1e97",
+      "contentHash": "618df900ff53e975",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12342,7 +12342,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "66cf4a02eedb0490",
+      "contentHash": "564b5e9cfd38febe",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12390,7 +12390,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "edfe9eb3c70ecde4",
+      "contentHash": "6077bf54a7c1557c",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12446,7 +12446,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "750052b030457de9",
+      "contentHash": "33aa094dd5847bb1",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. References CDS; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12494,7 +12494,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "65e49cd1231174bb",
+      "contentHash": "33be7549c4f2cc3f",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12528,7 +12528,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a6b33a301e8a0f8f",
+      "contentHash": "5fbe30deb7314c26",
       "correct": [
         "C"
       ],
@@ -12579,7 +12579,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c98451202698e58d",
+      "contentHash": "931f1b19bff15bde",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12616,7 +12616,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a6b33a301e8a0f8f",
+      "contentHash": "028ba6c476ed4736",
       "correct": [
         "C"
       ],
@@ -12679,7 +12679,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f29684de7f110d37",
+      "contentHash": "2430d3bfe588cbba",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12731,7 +12731,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "6f3381d815058786",
+      "contentHash": "cda078061738e9f8",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12778,7 +12778,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ca9fd8bf08106089",
+      "contentHash": "93905a5a0aa85d8c",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12814,7 +12814,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e68662e8b8b8d27a",
+      "contentHash": "024021ea11c579a4",
       "correct": [
         "D"
       ],
@@ -12864,7 +12864,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f0bd2dd5f47b88ab",
+      "contentHash": "c027bb85deffbc80",
       "correct": [
         "A",
         "D",
@@ -12915,7 +12915,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c98451202698e58d",
+      "contentHash": "d4399d6e11ea3644",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -12953,7 +12953,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "608a1c46978321dc",
+      "contentHash": "5a038c89989e835b",
       "correct": [
         "A"
       ],
@@ -13020,7 +13020,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d4b2c7cc06564105",
+      "contentHash": "b39bf54a03028f9d",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -13056,7 +13056,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f4d93d2c204bb1ff",
+      "contentHash": "f0e8b14118ff5181",
       "correct": [
         "A",
         "B",
@@ -13112,7 +13112,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "15cf04b214b9ac36",
+      "contentHash": "a97c2bdc7fbc070c",
       "correct": [
         "B",
         "E"
@@ -13182,7 +13182,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f33f393d7ea6021d",
+      "contentHash": "f1102fdd0d77df30",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13225,7 +13225,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f76ce67209a86ad",
+      "contentHash": "941e914a222671f8",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -13259,7 +13259,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "cbd0b455b7515a2b",
+      "contentHash": "a342d8ddb6f94094",
       "correct": [
         "B"
       ],
@@ -13314,7 +13314,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5e9c4b2debda0ecc",
+      "contentHash": "27ec02e48c1bc911",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -13349,7 +13349,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ea00ece778234335",
+      "contentHash": "d5d93d557e777808",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13382,7 +13382,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "36a48d333bcea80f",
+      "contentHash": "918495972d311937",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13415,7 +13415,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e23650837a3f1d32",
+      "contentHash": "e24ed514f3612d13",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13448,7 +13448,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b7e9aa4ed32b3c14",
+      "contentHash": "7e8f867367b5d2a9",
       "correct": [
         "D"
       ],
@@ -13494,7 +13494,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "73175bcb2fc49e4d",
+      "contentHash": "7f8aac9034a7fc44",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13525,7 +13525,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-c3ca3adc8264",
       "codeBlock": null,
-      "contentHash": "e6a200d7a505ad95",
+      "contentHash": "1cca4b6e9325d756",
       "correct": [
         "B"
       ],
@@ -13568,7 +13568,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-4a1f55f04c95",
       "codeBlock": null,
-      "contentHash": "36a7cf0bcdf9561b",
+      "contentHash": "2f81fe0a896eb332",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13604,7 +13604,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-c9fecd4fd711",
       "codeBlock": null,
-      "contentHash": "59dbc26f0293be43",
+      "contentHash": "d2134cebb52e606d",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13637,7 +13637,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-733d1c370a73",
       "codeBlock": null,
-      "contentHash": "9a76788f80a26904",
+      "contentHash": "f3cc332ebe19f3f2",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13670,7 +13670,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-071a569d1ccd",
       "codeBlock": null,
-      "contentHash": "f664b78f585e0249",
+      "contentHash": "2f54a202dd86dbc3",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13704,7 +13704,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b38fe91d0a6fa6b5",
+      "contentHash": "ed6bf1293bec7cde",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13736,7 +13736,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a6a1edcd1ac3",
       "codeBlock": null,
-      "contentHash": "715a3f3038b57266",
+      "contentHash": "23600a68be4a873f",
       "correct": [
         "D"
       ],
@@ -13784,7 +13784,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3ae7a9a99a43d2da",
+      "contentHash": "6a7e61fa4246e6a4",
       "correct": [
         "C"
       ],
@@ -13830,7 +13830,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f2acf74ee30c746",
+      "contentHash": "4f568231f003490d",
       "correct": [
         "B"
       ],
@@ -13875,7 +13875,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "023ac9ff2ddda274",
+      "contentHash": "435e8c2307246e72",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13908,7 +13908,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-cde94b2b1c0a",
       "codeBlock": null,
-      "contentHash": "58b68a65a40a7bcc",
+      "contentHash": "8ec057daee0f5f8a",
       "correct": [
         "A",
         "D"
@@ -13955,7 +13955,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-2e49043bf248",
       "codeBlock": null,
-      "contentHash": "1f73501eb16f94a5",
+      "contentHash": "d595bc4956d14f58",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -13990,7 +13990,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1628c1b1d5ab7399",
+      "contentHash": "b029b25020edf443",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -14021,7 +14021,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f2acf74ee30c746",
+      "contentHash": "f060e9ac7b3c85d9",
       "correct": [
         "B"
       ],
@@ -14067,7 +14067,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "80f655b211f763fe",
+      "contentHash": "19f852082febe237",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -14099,7 +14099,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f2acf74ee30c746",
+      "contentHash": "e70915a40c6dcf12",
       "correct": [
         "A"
       ],
@@ -14145,7 +14145,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f2acf74ee30c746",
+      "contentHash": "a1e51d35a7316178",
       "correct": [
         "C"
       ],
@@ -14195,7 +14195,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f1fd0a57f65b8f37",
+      "contentHash": "c78e409f6ceb416f",
       "correct": [
         "C"
       ],
@@ -14241,7 +14241,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a6a3779d5c60870d",
+      "contentHash": "3e782d2905231f23",
       "correct": [
         "A",
         "C"
@@ -14288,7 +14288,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e66d47d50699a2c8",
+      "contentHash": "1be5a4fcd16cddad",
       "correct": [
         "B"
       ],
@@ -14325,7 +14325,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b969f9659388b453",
+      "contentHash": "ba161dd401d44773",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -14358,7 +14358,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b446dd1033af409b",
+      "contentHash": "b02d675ab5ecc138",
       "correct": [
         "A"
       ],
@@ -14406,7 +14406,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "99d59f2a8af9d67e",
+      "contentHash": "adc543de0127f3ce",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -14437,7 +14437,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3b5addc8547c74f3",
+      "contentHash": "e0a0980d7177d160",
       "correct": [
         "B",
         "C"
@@ -14491,7 +14491,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "1e3590b292105cc7",
+      "contentHash": "6fc14329e5e4f179",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -14521,7 +14521,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7210ef8aa4ee5f06",
+      "contentHash": "186c680c48dfff94",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -14567,7 +14567,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "666fc94372bcaace",
+      "contentHash": "ca3138c2b547b702",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -14602,7 +14602,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b784966e0bef8d50",
+      "contentHash": "572885f4f899313e",
       "correct": [
         "B"
       ],
@@ -14639,7 +14639,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c6b539de6f392f1a",
+      "contentHash": "7e2a30fb90488f02",
       "correct": [
         "B"
       ],
@@ -14679,7 +14679,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8513dc0b93f1a44f",
+      "contentHash": "9b7236a0f3f1a95d",
       "correct": [
         "B"
       ],
@@ -14720,7 +14720,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "5242f016069bfdf3",
+      "contentHash": "58271dc07d940810",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -14765,7 +14765,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "424322f12421b7fb",
+      "contentHash": "b611e1f367a8ee3e",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -14800,7 +14800,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f9a39fa4da767f0b",
+      "contentHash": "366ea6854c47e2c4",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -14836,7 +14836,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e3bbfa250f7d1d58",
+      "contentHash": "903490bb4ebb2868",
       "correct": [
         "A"
       ],
@@ -14887,7 +14887,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d08f90c533e7fca7",
+      "contentHash": "7e4ab7545139466d",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -14939,7 +14939,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ee6e1bf2477a0e4f",
+      "contentHash": "924adf64c6be02d0",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -14976,7 +14976,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f34652f91e541659",
+      "contentHash": "742f4dfc0188c34a",
       "correct": [
         "A",
         "B",
@@ -15032,7 +15032,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f641a25e792d51c1",
+      "contentHash": "8438ba96378cf1b6",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -15066,7 +15066,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a0e9bec3034b5ac3",
+      "contentHash": "f2ab4adb762a9a48",
       "correct": [
         "A"
       ],
@@ -15116,7 +15116,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f9ac7b76394a738",
+      "contentHash": "dd5a156f9406b8ea",
       "correct": [
         "C",
         "D"
@@ -15168,7 +15168,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c39c8fe5e2f1c221",
+      "contentHash": "fe7eb95395f18579",
       "correct": [
         "B"
       ],
@@ -15230,7 +15230,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "debf797e03ebf2c7",
+      "contentHash": "c4696de63a3fefbf",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -15278,7 +15278,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "fb0d262bb115da1b",
+      "contentHash": "5a144f23a4764974",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -15313,7 +15313,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4d50078d03fb64a8",
+      "contentHash": "043b19d2075d2f29",
       "correct": [
         "A"
       ],
@@ -15362,7 +15362,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3524b3d1cf770ba",
+      "contentHash": "915df471ccfccf9d",
       "correct": [
         "A"
       ],
@@ -15403,7 +15403,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d8359f3bd2b24d8e",
+      "contentHash": "25a071937a4f96fa",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -15436,7 +15436,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "340689a4d18c78dd",
+      "contentHash": "c0b71daaa7bd4104",
       "correct": [
         "D"
       ],
@@ -15482,7 +15482,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2809154e914caa88",
+      "contentHash": "d4a565216e60aa86",
       "correct": [
         "C",
         "D"
@@ -15532,7 +15532,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-176528707095",
       "codeBlock": null,
-      "contentHash": "82d654b8f78fd34e",
+      "contentHash": "cb255b3ecb34d2a5",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -15565,7 +15565,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "340689a4d18c78dd",
+      "contentHash": "d355f584dc8476c7",
       "correct": [
         "A"
       ],
@@ -15613,7 +15613,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "0a2496de14f63cee",
+      "contentHash": "6c8dd0015a18a08a",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -15645,7 +15645,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f5fe76fe6101407c",
+      "contentHash": "52f4abe0631cfb20",
       "correct": [
         "A"
       ],
@@ -15682,7 +15682,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f2590c5c1eb05e19",
+      "contentHash": "7c828188301e265f",
       "correct": [
         "B"
       ],
@@ -15724,7 +15724,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a1c0c499c715d96b",
+      "contentHash": "026f4662fa0ba185",
       "correct": [
         "B"
       ],
@@ -15761,7 +15761,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bab4ed996fab5b30",
+      "contentHash": "bb75ee5af3a8963c",
       "correct": [
         "A"
       ],
@@ -15799,7 +15799,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-81b1e183bdd5",
       "codeBlock": null,
-      "contentHash": "b1c0bf2f0fa8bd60",
+      "contentHash": "8adbbcf885b1b728",
       "correct": [
         "A",
         "B"
@@ -15845,7 +15845,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-1559cdba9592",
       "codeBlock": null,
-      "contentHash": "22d24f5c1f373910",
+      "contentHash": "a7313f119fd53951",
       "correct": [
         "B"
       ],
@@ -15892,7 +15892,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "c2850e2268269771",
+      "contentHash": "f235c90f51f6f0c5",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -15924,7 +15924,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "15a08ceaefffc09a",
+      "contentHash": "be631e1249ba627e",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -15956,7 +15956,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "05d5f74c69cd6ab7",
+      "contentHash": "099a232729cbda1b",
       "correct": [
         "A"
       ],
@@ -16002,7 +16002,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "06b62826f508a7ed",
+      "contentHash": "8c182df9f0ea99df",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -16033,7 +16033,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f2acf74ee30c746",
+      "contentHash": "0ff995ee9fb21277",
       "correct": [
         "D"
       ],
@@ -16079,7 +16079,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3c3ef4448ca5e50c",
+      "contentHash": "36a7ee1a06575a8f",
       "correct": [
         "B"
       ],
@@ -16116,7 +16116,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "02a5f49f9cad8c28",
+      "contentHash": "b7cd63d00cc2b5ad",
       "correct": [
         "A"
       ],
@@ -16154,7 +16154,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a45878264959a58f",
+      "contentHash": "e5d27260c9f82303",
       "correct": [
         "B"
       ],
@@ -16191,7 +16191,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "340d4213581a9c38",
+      "contentHash": "89882b6ed00cf74b",
       "correct": [
         "A"
       ],
@@ -16241,7 +16241,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "517a829986d93788",
+      "contentHash": "3d88cdba68cf2dff",
       "correct": [
         "A",
         "D"
@@ -16292,7 +16292,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "340d4213581a9c38",
+      "contentHash": "0c30255678adfa3c",
       "correct": [
         "A"
       ],
@@ -16338,7 +16338,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d9398b00caf24d4d",
+      "contentHash": "a8b0428fd2140ae7",
       "correct": [
         "A"
       ],
@@ -16387,7 +16387,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "340d4213581a9c38",
+      "contentHash": "d6b00b599040e060",
       "correct": [
         "D"
       ],
@@ -16437,7 +16437,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "529363def8222bfd",
+      "contentHash": "a8728bc060bb5bc2",
       "correct": [
         "B"
       ],
@@ -16483,7 +16483,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4c262dcf4532b231",
+      "contentHash": "f170d7f95cfb41d5",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -16516,7 +16516,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d32b87ae1d85c8d9",
+      "contentHash": "d7eb94a7d7ac558e",
       "correct": [
         "A"
       ],
@@ -16553,7 +16553,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "66975f5aa75b8192",
+      "contentHash": "2c12f06dc199278c",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -16589,7 +16589,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "589f8d33a20d51e2",
+      "contentHash": "133b52ddf3e50126",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -16637,7 +16637,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "510df14d54a2cae9",
+      "contentHash": "f4b3368283b237d7",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -16672,7 +16672,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "96f575068cc8921d",
+      "contentHash": "9c09bed925ec1113",
       "correct": [
         "D"
       ],
@@ -16722,7 +16722,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "b034a1f4387821fa",
+      "contentHash": "1fa1af855a829a57",
       "correct": [
         "D"
       ],
@@ -16770,7 +16770,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a3e9f812f958866b",
+      "contentHash": "3ddcfd9bb184e3f0",
       "correct": [
         "D"
       ],
@@ -16817,7 +16817,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3700c098e1115f78",
+      "contentHash": "75c375b6d5129b74",
       "correct": [
         "B",
         "D"
@@ -16885,7 +16885,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e1271a168a370751",
+      "contentHash": "6a7bce1c302b9696",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -16928,7 +16928,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "e840b5136c13cf19",
+      "contentHash": "cc0ca191bae672ee",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -16963,7 +16963,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "fdf000225daba4f0",
+      "contentHash": "29873ba3ab9c24fe",
       "correct": [
         "C"
       ],
@@ -17025,7 +17025,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2cb4c6943cd7714c",
+      "contentHash": "cbda76d797cd68f3",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -17072,7 +17072,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "f6605f69ba80ab15",
+      "contentHash": "64cb58a67a7bec36",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -17104,7 +17104,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "cfb5e8a76100444c",
+      "contentHash": "aa876a2fd02456ec",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -17152,7 +17152,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "dc7d5acc3e9e1fef",
+      "contentHash": "f5e1e46eea99aee1",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -17187,7 +17187,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8c51be8b7f0445d2",
+      "contentHash": "2059ef59a638d1f3",
       "correct": [
         "D"
       ],
@@ -17235,7 +17235,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "bc7359db0d385929",
+      "contentHash": "d3044d5e0a51630c",
       "correct": [
         "C",
         "D"
@@ -17281,7 +17281,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "14a8b39f1474f3be",
+      "contentHash": "d83bb852292dd504",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -17327,7 +17327,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "cc45e6dd6ca85fbc",
+      "contentHash": "cd1c8c0b961e80dd",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -17362,7 +17362,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "4f808b1754ec24fd",
+      "contentHash": "eb8ee72dfd52ba69",
       "correct": [
         "B"
       ],
@@ -17415,7 +17415,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2fdd326621c55403",
+      "contentHash": "7f35fe64da6de60b",
       "correct": [
         "A"
       ],
@@ -17471,7 +17471,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "9c71c2b2b30f65b1",
+      "contentHash": "6d8a9f8cc63058ff",
       "correct": [
         "A"
       ],
@@ -17525,7 +17525,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "64d1a7c1c9d0f44e",
+      "contentHash": "33026f06ab55c1aa",
       "correct": [
         "C",
         "D"
@@ -17585,7 +17585,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "14b79c0b04b415be",
+      "contentHash": "324658f9310080d1",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -17626,7 +17626,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "bfc263a695e0247d",
+      "contentHash": "032e32ec701c6f35",
       "correct": [
         "B"
       ],
@@ -17684,7 +17684,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ac726a0e0f434625",
+      "contentHash": "f12eb65222d07bb3",
       "correct": [
         "C"
       ],
@@ -17732,7 +17732,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "c31fec60ca7e7cbe",
+      "contentHash": "64427143d6f1c1ef",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -17774,7 +17774,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-76bbc9d6e40d",
       "codeBlock": null,
-      "contentHash": "581e89136cf11d6f",
+      "contentHash": "79a0e00f61c1bb78",
       "correct": [
         "B"
       ],
@@ -17835,7 +17835,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "be0ffabca2183b54",
+      "contentHash": "89a1d8e23b59a03b",
       "correct": [
         "A"
       ],
@@ -17899,7 +17899,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a9fad32b557a794f",
+      "contentHash": "3720dd2b0200c58c",
       "correct": [
         "D"
       ],
@@ -17944,7 +17944,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ba8a8cb14d7bc8fe",
+      "contentHash": "06d5ba2670b6ecef",
       "correct": [
         "A",
         "C"
@@ -18000,7 +18000,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "37a725eaa1f02904",
+      "contentHash": "3f3d52e7977cd292",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18031,7 +18031,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "8b2793ebb84180d7",
+      "contentHash": "1a08abf5159d936d",
       "correct": [
         "A"
       ],
@@ -18080,7 +18080,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "2cace6e748f5ebd2",
+      "contentHash": "763acd24b375f357",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse.",
@@ -18128,7 +18128,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "34dc9d5471d90ec4",
+      "contentHash": "02efb3d582cab1f4",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -18162,7 +18162,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "7b56a1d106f825d0",
+      "contentHash": "76f589254ccd5ac2",
       "correct": [
         "A"
       ],
@@ -18204,7 +18204,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "72497de16f219d10",
+      "contentHash": "caf9ffb1d0ea4303",
       "correct": [
         "A",
         "D"
@@ -18254,7 +18254,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a9fad32b557a794f",
+      "contentHash": "3720dd2b0200c58c",
       "correct": [
         "D"
       ],
@@ -18300,7 +18300,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "ba8a8cb14d7bc8fe",
+      "contentHash": "06d5ba2670b6ecef",
       "correct": [
         "A",
         "C"
@@ -18346,7 +18346,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "72497de16f219d10",
+      "contentHash": "caf9ffb1d0ea4303",
       "correct": [
         "A",
         "D"
@@ -18397,7 +18397,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "49080e752191ec4c",
+      "contentHash": "408ae9c6aefa9bcf",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18429,7 +18429,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "d1473bd76fe7d04e",
+      "contentHash": "3d2ef0066945cd55",
       "correct": [
         "D"
       ],
@@ -18494,7 +18494,7 @@
       ],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "3b16ebe14ee6e8d4",
+      "contentHash": "8a38ae612b556742",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -18527,7 +18527,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "a4910e9a72deac5f",
+      "contentHash": "544b786898ba9b42",
       "correct": [
         "C",
         "D"
@@ -18574,7 +18574,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "ae1e746d57bed925",
+      "contentHash": "fe645df66eb1400d",
       "correct": [
         "B",
         "C"
@@ -18629,7 +18629,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "3e8c26b8341a13da",
+      "contentHash": "3401ad360117773a",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18668,7 +18668,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-6abea1e34014",
       "codeBlock": null,
-      "contentHash": "fd4cab0dbedc55fd",
+      "contentHash": "2c9ca23c5772c8c8",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18708,7 +18708,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "ab9a5db2fb2e983e",
+      "contentHash": "b379b6697740ea75",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18748,7 +18748,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "0bca68c3891cc917",
+      "contentHash": "c13c567be00efb95",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -18792,7 +18792,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "965e1c9ebc0ba542",
+      "contentHash": "f0b1a344ecd6455e",
       "correct": [
         "C"
       ],
@@ -18844,7 +18844,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-a741dad41941",
       "codeBlock": null,
-      "contentHash": "9e6e51607d437e5f",
+      "contentHash": "2c541beda2f611f7",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18884,7 +18884,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-00a933e59201",
       "codeBlock": null,
-      "contentHash": "ef737855aa3df94c",
+      "contentHash": "647e4717fc85218c",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -18927,7 +18927,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-f021ed1e852a",
       "codeBlock": null,
-      "contentHash": "673489003f6cd6e4",
+      "contentHash": "a77cd52b949319bc",
       "correct": [
         "C"
       ],
@@ -18994,7 +18994,7 @@
       ],
       "caseStudyId": "cs-63f76514af22",
       "codeBlock": null,
-      "contentHash": "115865ff1fa78a68",
+      "contentHash": "f57bbfa6888b9500",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -19046,7 +19046,7 @@
       ],
       "caseStudyId": "cs-a8bf0bcb2a50",
       "codeBlock": null,
-      "contentHash": "316c813301a7b48f",
+      "contentHash": "d9bd434efa71deff",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse. Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -19083,7 +19083,7 @@
       "boxAnswers": [],
       "caseStudyId": null,
       "codeBlock": null,
-      "contentHash": "38b67848e6b6a9c3",
+      "contentHash": "f7baded67ebdef07",
       "correct": [
         "C"
       ],
@@ -19147,7 +19147,7 @@
       ],
       "caseStudyId": "cs-1648eb362e91",
       "codeBlock": null,
-      "contentHash": "406748a8ab5ab850",
+      "contentHash": "2fccfb78742bd02b",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -19185,7 +19185,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "357abae646e0ea01",
+      "contentHash": "ecd880b3db7fc1cc",
       "correct": [
         "D"
       ],
@@ -19247,7 +19247,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "95043f14b9806f94",
+      "contentHash": "b329e19fe93df5d5",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "References Common Data Service; terminology superseded by Dataverse.",
@@ -19287,7 +19287,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-433e968f0d75",
       "codeBlock": null,
-      "contentHash": "a39e3376b99f8d25",
+      "contentHash": "956e089781c6b632",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -19331,7 +19331,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-2eed6b8359a0",
       "codeBlock": null,
-      "contentHash": "26ffbefce9663e4c",
+      "contentHash": "508f0723342accd5",
       "correct": [
         "B"
       ],
@@ -19379,7 +19379,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-6abea1e34014",
       "codeBlock": null,
-      "contentHash": "778d6d3a5672cfb1",
+      "contentHash": "7fab23ce0b1feb3a",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",
@@ -19424,7 +19424,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-caa32aeff82d",
       "codeBlock": null,
-      "contentHash": "e888d3bab9e5512b",
+      "contentHash": "fcc1f0a617d3dc7b",
       "correct": [
         "B",
         "C"
@@ -19475,7 +19475,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-6abea1e34014",
       "codeBlock": null,
-      "contentHash": "ad46a57a48c65f5b",
+      "contentHash": "f6c652b9fb474308",
       "correct": [
         "C"
       ],
@@ -19531,7 +19531,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-6b86783c9ae2",
       "codeBlock": null,
-      "contentHash": "e667d15d2f53480d",
+      "contentHash": "67a0a0324bb4b29b",
       "correct": [
         "A",
         "D"
@@ -19583,7 +19583,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-5b4a5c99bc40",
       "codeBlock": null,
-      "contentHash": "14d2117374f4817d",
+      "contentHash": "de527d5d0dc1f432",
       "correct": [],
       "currency": "current",
       "currencyNote": null,
@@ -19618,7 +19618,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-2eed6b8359a0",
       "codeBlock": null,
-      "contentHash": "74058226b34ccd14",
+      "contentHash": "9587f469b5b5cea7",
       "correct": [
         "D"
       ],
@@ -19668,7 +19668,7 @@
       "boxAnswers": [],
       "caseStudyId": "cs-2eed6b8359a0",
       "codeBlock": null,
-      "contentHash": "7b24fe7f9f7e077b",
+      "contentHash": "98d4cd190616c8b0",
       "correct": [],
       "currency": "suspect",
       "currencyNote": "Links to docs.microsoft.com; content has moved to learn.microsoft.com.",

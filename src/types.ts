@@ -132,3 +132,105 @@ export interface ProgressRecord {
   correction: string | null;
   notes: string | null;
 }
+
+// ── UI contract ─────────────────────────────────────────────────────────────
+// Owned by the orchestrator. Renderers, store and features all code against
+// these; none of them may change them. Raise a change rather than editing.
+
+/**
+ * What the user has entered for a card, before grading. One variant per way a
+ * question can be answered — `kind` is derived from the question by
+ * `responseKindFor`, never guessed at the call site.
+ */
+export type Response =
+  | { kind: 'choice'; keys: string[] }
+  | { kind: 'boxes'; values: string[] }
+  | { kind: 'self'; verdict: SelfVerdict | null };
+
+export type SelfVerdict = 'correct' | 'wrong';
+
+export type ResponseKind = Response['kind'];
+
+/** Outcome of grading one response. `perBox` is populated for `boxes` only. */
+export interface Grade {
+  correct: boolean;
+  perBox: boolean[] | null;
+  /** True when the verdict came from the user, not from comparing to the bank. */
+  selfGraded: boolean;
+  /** Set when the card cannot be graded at all (q266). */
+  ungradeable: boolean;
+}
+
+/** Where a card is in the answer/reveal cycle. */
+export type CardPhase = 'answering' | 'revealed';
+
+/**
+ * The single prop contract every question renderer honours. `src/components/
+ * question/QuestionCard.tsx` dispatches on `question.type` and `selfGraded`.
+ */
+export interface QuestionRendererProps {
+  question: Question;
+  caseStudy: CaseStudy | null;
+  phase: CardPhase;
+  response: Response;
+  grade: Grade | null;
+  /** Ignored once `phase` is 'revealed'. */
+  onChange: (response: Response) => void;
+  /** User's persisted dispute of the bank's key, if any. */
+  correction: string | null;
+  /** Hides explanation, answers and grading — used by the exam simulator. */
+  suppressFeedback?: boolean;
+}
+
+// ── Sessions ────────────────────────────────────────────────────────────────
+
+export type SessionMode = 'drill' | 'weak-area' | 'simulator';
+
+export interface SessionQuestionResult {
+  contentHash: string;
+  questionId: number;
+  correct: boolean;
+  confidence: Confidence;
+  skillArea: SkillAreaKey;
+  /** Milliseconds spent on the card. */
+  elapsedMs: number;
+}
+
+export interface Session {
+  id: string;
+  mode: SessionMode;
+  startedAt: number;
+  finishedAt: number | null;
+  results: SessionQuestionResult[];
+  /** Simulator only: the scaled 0–1000 score, or null while in progress. */
+  scaledScore: number | null;
+}
+
+// ── Readiness ───────────────────────────────────────────────────────────────
+
+export type Rag = 'red' | 'amber' | 'green';
+
+export interface AreaReadiness {
+  area: SkillAreaKey;
+  label: string;
+  weight: number;
+  /** Questions in the bank for this area. */
+  total: number;
+  /** Distinct questions attempted at least once. */
+  attempted: number;
+  /** Correct share of the most recent attempt on each attempted question, 0–1. */
+  accuracy: number;
+  /** Share of the area's pool seen at least once, 0–1. */
+  coverage: number;
+  rag: Rag;
+}
+
+export interface Readiness {
+  areas: AreaReadiness[];
+  /** Blueprint-weighted projection onto the exam's 0–1000 scale. */
+  projectedScore: number;
+  onTrack: boolean;
+  daysToExam: number;
+  /** The single highest-value thing to do next, already resolved to a link. */
+  nextAction: { label: string; detail: string; href: string };
+}

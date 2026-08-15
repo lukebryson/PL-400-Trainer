@@ -111,7 +111,13 @@ def merge_one(qid: int, pdf: RawQuestion | None, docx: RawQuestion | None) -> Qu
 
     return Question(
         id=qid,
-        contentHash=schema.content_hash(stem or str(qid)),
+        contentHash=schema.content_hash(
+            qtype=qtype,
+            stem=stem or str(qid),
+            options=options,
+            box_answers=boxes,
+            image_digests=[schema.image_digest(p) for p in images],
+        ),
         source=source,
         sourcePages=pages,
         type=qtype,  # type: ignore[arg-type]
