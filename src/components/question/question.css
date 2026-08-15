@@ -1,0 +1,202 @@
+/*
+ * Component-scoped additions for the question renderers. The design system in
+ * `src/styles.css` is owned by the orchestrator and is not edited here; this
+ * file only composes its tokens for layout the shared sheet does not cover.
+ */
+
+/* Announced by a screen reader, never painted. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.qcard .qhead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.qcard .qhead .qid {
+  font-family: var(--mono);
+}
+
+/* ── Case study ──────────────────────────────────────────────────────────── */
+
+.case-panel {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--info);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--surface-2);
+}
+
+.case-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  padding: 10px 13px;
+  cursor: pointer;
+}
+
+.case-toggle .chev {
+  font-family: var(--mono);
+  color: var(--text-faint);
+  font-size: 11px;
+}
+
+.case-body {
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 0 13px 12px;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+
+.case-body .prose {
+  font-size: 14px;
+  color: var(--text-dim);
+  padding-top: 10px;
+}
+
+/* ── Images ──────────────────────────────────────────────────────────────── */
+
+.qimages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qimage-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  border-radius: var(--radius);
+}
+
+.qimage-btn:focus-visible {
+  outline: 2px solid var(--info);
+  outline-offset: 2px;
+}
+
+.qzoom {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(4px);
+  overflow: auto;
+}
+
+.qzoom .qzoom-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qzoom img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+/* ── Options ─────────────────────────────────────────────────────────────── */
+
+.optionlist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Box answers ─────────────────────────────────────────────────────────── */
+
+.boxlist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.boxrow {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.boxrow .boxhead {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.boxrow label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.boxrow input.is-correct {
+  border-color: var(--ok);
+}
+
+.boxrow input.is-wrong {
+  border-color: var(--bad);
+}
+
+.boxrow .expected {
+  font-size: 13px;
+  color: var(--ok);
+}
+
+/* ── Self-graded ─────────────────────────────────────────────────────────── */
+
+.verdicts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── References ──────────────────────────────────────────────────────────── */
+
+.reflist {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.reflist li {
+  margin-bottom: 3px;
+}
+
+/* ── Dispute ─────────────────────────────────────────────────────────────── */
+
+.dispute {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

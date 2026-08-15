@@ -18,7 +18,16 @@ export interface Store {
   ready: boolean;
   /** Keyed by `contentHash` — never by id or array index. */
   progress: ReadonlyMap<string, ProgressRecord>;
+  /** Most recent first. */
   sessions: Session[];
+  /**
+   * False when IndexedDB was unavailable — private browsing, a blocked upgrade —
+   * and progress is living in memory for this tab only. The UI must say so
+   * plainly: a study session the user believes is being saved, and is not, is
+   * worse than no session.
+   */
+  persistent: boolean;
+  storageError: string | null;
 
   /** Applies the Leitner move, appends the attempt, and persists. */
   recordAttempt(input: {
@@ -47,7 +56,11 @@ export interface DrillFilter {
   type?: QuestionType;
   /** Only questions answered wrongly at least twice. */
   wrongTwice?: boolean;
-  /** Only questions due under the Leitner schedule. Defaults true for a session. */
+  /**
+   * Only questions due under the Leitner schedule. **Defaults to true**, so
+   * `selectDrill({ area })` serves what is due in that area, not the whole
+   * pool. Pass `false` explicitly to revise an area end to end.
+   */
   dueOnly?: boolean;
   /** Exclude self-graded cards, for a purely machine-graded session. */
   gradedOnly?: boolean;

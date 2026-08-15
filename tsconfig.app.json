@@ -21,7 +21,10 @@
     "exactOptionalPropertyTypes": false,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
+    // `node` is here for the build-time assertions in `src/lib/bank.test.ts`,
+    // which stat and read the shipped images off disk. Nothing in the app itself
+    // may import from `node:*`.
+    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom", "node"],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
   },
   "include": ["src"]

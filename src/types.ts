@@ -119,6 +119,13 @@ export interface Attempt {
   confidence: Confidence;
   /** User's own verdict for self-graded cards. */
   selfGraded: boolean;
+  /**
+   * Milliseconds on the card. Kept per attempt, not only per session, because
+   * pacing is a real exam risk: roughly 100 minutes for 40–60 questions leaves
+   * under two minutes each, and the questions that run long are the ones worth
+   * knowing about before September.
+   */
+  elapsedMs: number;
 }
 
 export interface ProgressRecord {
@@ -166,7 +173,10 @@ export type CardPhase = 'answering' | 'revealed';
 
 /**
  * The single prop contract every question renderer honours. `src/components/
- * question/QuestionCard.tsx` dispatches on `question.type` and `selfGraded`.
+ * question/QuestionCard.tsx` dispatches on `responseKindFor(question)` from
+ * `lib/bank.ts` — on how the card can be answered, not on `question.type`,
+ * because a `mcq-single` whose options live in the image answers like a
+ * self-graded card and must render like one.
  */
 export interface QuestionRendererProps {
   question: Question;
@@ -178,6 +188,19 @@ export interface QuestionRendererProps {
   onChange: (response: Response) => void;
   /** User's persisted dispute of the bank's key, if any. */
   correction: string | null;
+  /**
+   * Raise or clear a dispute. Maps onto `Store.setCorrection`; the renderers
+   * never persist anything themselves. Optional so a read-only card (the
+   * simulator review, the export preview) can omit it.
+   */
+  onCorrectionChange?: (correction: string | null) => void;
+  /**
+   * Case-study disclosure, controlled by the session so a background stays open
+   * on first sight and collapses once read. Omit both and the panel manages its
+   * own state.
+   */
+  caseStudyOpen?: boolean;
+  onCaseStudyToggle?: (open: boolean) => void;
   /** Hides explanation, answers and grading — used by the exam simulator. */
   suppressFeedback?: boolean;
 }

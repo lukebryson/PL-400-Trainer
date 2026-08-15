@@ -109,6 +109,20 @@ patched: q182 states `Answer: H` with only options A–F, and q266 above.
 Zero other answer keys reference a non-existent option. If a change makes that
 untrue, the parser regressed.
 
+`answerDisagreement` is null for all 440 — not a bug. Wherever both sources
+carried a key, the PDF and the DOCX agreed. The reconciliation in `03_merge.py`
+is real and the notice that renders it is built; nothing has tripped it.
+
+`codeBlock` is null for all 440 — this one *is* a gap. `03_merge.py` hardcodes
+`codeBlock=None` and no stage ever populates it, yet 67 questions carry code in
+the stem or explanation (`IPlugin`, `IOrganizationService`, `Xrm.`, `formContext`,
+FetchXML). The code is not lost — it renders inline, with indentation intact,
+because the stem is `white-space: pre-wrap` — but it is unhighlighted and
+undifferentiated from prose. `CodeBlock.tsx` exists and is tested against
+synthetic input, waiting for a producer. Extracting the runs reliably means
+segmenting plain text without corrupting the surrounding stem; it is a real
+piece of work, not a one-liner.
+
 ## Architecture
 
 - `pipeline/` — Python extraction. `schema.py` is the shared record contract; every
