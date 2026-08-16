@@ -43,6 +43,19 @@ const MS_PER_QUESTION = 120_000;
 const LOW_TIME_MS = 600_000;
 const LENGTHS = [40, 50, 60];
 
+/**
+ * The most time one card can be charged with.
+ *
+ * The clock is wall-clock against a deadline, so backgrounding the tab is
+ * handled correctly — the paper still auto-submits on return. The stopwatch is
+ * not: it would charge the whole background interval, hours if the tab sat
+ * overnight, to whichever card happened to be on screen. That figure is written
+ * into every attempt and read back by the "longest on the clock" line. Five
+ * times the budget for a single question is already a pacing disaster; beyond
+ * that the user was not in the room.
+ */
+const MAX_CARD_MS = MS_PER_QUESTION * 5;
+
 /** Pure: bank `spent` against the card being left. */
 const charged = (elapsed: readonly number[], index: number, spent: number): number[] =>
   elapsed.map((ms, i) => (i === index ? ms + spent : ms));
@@ -70,6 +83,14 @@ export function SimulatorPage(_props: PageProps) {
   const [tick, setTick] = useState(0);
 
   const viewStart = useRef(Date.now());
+  /**
+   * The session id already submitted. The auto-submit effect cannot fire twice
+   * on its own — effects run once per commit and `sitting` is false by the next
+   * one — but `submit` posts 40–60 attempts to the schedule, and a Confirm click
+   * racing the deadline, or a double-click on Confirm, would post all of them
+   * twice. Set synchronously, for the same reason as the drill's `advanced`.
+   */
+  const submitted = useRef<string>('');
 
   const sitting = paper !== null && paper.results === null;
   const remaining = paper === null ? 0 : paper.deadline - Date.now();
@@ -105,7 +126,7 @@ export function SimulatorPage(_props: PageProps) {
     const now = Date.now();
     const spent = now - viewStart.current;
     viewStart.current = now;
-    return spent;
+    return Math.min(Math.max(0, spent), MAX_CARD_MS);
   }, []);
 
   const goTo = useCallback(
@@ -136,6 +157,8 @@ export function SimulatorPage(_props: PageProps) {
   const submit = useCallback(() => {
     const p = paper;
     if (p === null || p.results !== null) return;
+    if (submitted.current === p.session.id) return;
+    submitted.current = p.session.id;
     const elapsed = charged(p.elapsed, p.index, takeSpent());
 
     const grades = p.questions.map((q, i) => gradeResponse(q, p.responses[i]!));
@@ -530,8 +553,10 @@ function Review({
         </div>
         <p className="tiny faint" style={{ margin: 0, maxWidth: 'var(--measure)' }}>
           Scaled by blueprint weight, not by how many of each area the sample happened to draw, and
-          renormalised over the areas actually asked. It is the same arithmetic as the dashboard
-          projection but measured on one sitting, so expect it to be the noisier of the two.
+          renormalised over the areas actually asked. It is <em>not</em> the dashboard projection:
+          that one penalises thin coverage across the whole bank and counts an area you have never
+          touched as zero, both of which would be meaningless on a single paper. This measures the
+          questions in front of you, so expect it to read higher, and noisier, than the projection.
         </p>
 
         <table className="grid">

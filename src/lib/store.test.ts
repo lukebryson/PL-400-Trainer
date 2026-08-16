@@ -267,4 +267,34 @@ describe('export and import', () => {
     const view = await mounted();
     await expect(view.result.current.importJson('{"nope":true}')).rejects.toThrow(/backup/);
   });
+
+  /**
+   * `isDbDump` only checks the envelope. A record that gets past it with no
+   * `attempts` array is persisted, and then every later read throws on
+   * `record.attempts.length` — permanently, because it is in IndexedDB. A
+   * truncated file is enough to do it, so malformed elements are skipped.
+   */
+  it('skips malformed records rather than persisting a landmine', async () => {
+    const view = await mounted();
+    const backup = {
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      progress: [
+        { contentHash: q0.contentHash, box: 3, dueAt: 0, timesWrong: 0 }, // no attempts
+        { contentHash: q1.contentHash, box: 99, dueAt: 0, attempts: [], timesWrong: 0, correction: null, notes: null },
+        { box: 2, dueAt: 0, attempts: [], timesWrong: 0 }, // no hash
+      ],
+      sessions: [{ id: 's-bad', startedAt: 1 }], // no results array
+      meta: [],
+    };
+
+    let outcome = { imported: 0, skipped: 0 };
+    await act(async () => {
+      outcome = await view.result.current.importJson(JSON.stringify(backup));
+    });
+
+    expect(outcome).toEqual({ imported: 0, skipped: 4 });
+    expect(view.result.current.progress.size).toBe(0);
+    expect(view.result.current.sessions).toEqual([]);
+  });
 });

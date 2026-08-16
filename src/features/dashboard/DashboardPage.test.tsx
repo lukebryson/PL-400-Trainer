@@ -88,6 +88,27 @@ describe('DashboardPage', () => {
     view.unmount();
   });
 
+  /**
+   * The table claims to be ordered by "what an hour buys: weight × shortfall".
+   * The comparator originally crossed its operands — `b.weight × shortfall(a)`
+   * — which is not a comparator at all, and it put a fully-answered 33% area
+   * above five untouched ones. The advice was the exact opposite of the truth.
+   */
+  it('puts the area an hour buys most at the top, not the heaviest one', async () => {
+    const view = mount(createElement(Seeder, { area: 'extend-platform', count: 12 }));
+    await waitFor(() => expect(screen.getByTestId('projected').textContent).not.toBe('0'));
+
+    const rows = screen.getByRole('table').querySelectorAll('tbody tr');
+    const labels = [...rows].map((r) => r.querySelector('td')!.textContent!.trim());
+    expect(labels).toHaveLength(6);
+
+    // Untouched and 17.5% of the paper: nothing else is worth more.
+    expect(labels[0]).toContain('Develop integrations');
+    // Answered 12 for 12: the largest weight, and now the smallest shortfall.
+    expect(labels[labels.length - 1]).toContain('Extend the platform');
+    view.unmount();
+  });
+
   it('states what the bank cannot tell you rather than burying it', async () => {
     mount();
     await waitFor(() => expect(screen.getByTestId('projected')).toBeTruthy());

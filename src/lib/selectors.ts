@@ -81,8 +81,14 @@ const AREA_POOL = Object.fromEntries(
   SKILL_AREA_KEYS.map((k) => [k, dedupeByHash(questionsByArea(k))]),
 ) as Record<SkillAreaKey, Question[]>;
 
-/** Unique drillable questions — 436, not 439: q266 is out, duplicates collapse. */
-const DRILLABLE_UNIQUE = dedupeByHash(drillable);
+/**
+ * Unique drillable questions — 436, not 439: q266 is out, duplicates collapse.
+ *
+ * Exported because it is the denominator of "seen at least once". `bank.drillable`
+ * is 439 and counts the three duplicate pairs twice, so a dashboard that divides
+ * by it can never reach 100% however much the user drills.
+ */
+export const drillableUnique: Question[] = dedupeByHash(drillable);
 
 // ── Due and drill selection ─────────────────────────────────────────────────
 
@@ -91,7 +97,7 @@ const DRILLABLE_UNIQUE = dedupeByHash(drillable);
  * there is. `drillable` already excludes q266, the one dead end.
  */
 export const dueQuestions = (progress: ProgressMap, now: number = Date.now()): Question[] =>
-  DRILLABLE_UNIQUE.filter((q) => isDue(progress.get(q.contentHash), now));
+  drillableUnique.filter((q) => isDue(progress.get(q.contentHash), now));
 
 /**
  * `dueOnly` defaults to true, as `DrillFilter` states: the default session
@@ -104,7 +110,7 @@ export const selectDrill = (
   now: number = Date.now(),
 ): Question[] => {
   const dueOnly = filter.dueOnly ?? true;
-  const pool = dedupeByHash(filter.area ? AREA_POOL[filter.area] : DRILLABLE_UNIQUE).filter((q) => {
+  const pool = dedupeByHash(filter.area ? AREA_POOL[filter.area] : drillableUnique).filter((q) => {
     if (filter.subtopic && q.subtopic !== filter.subtopic) return false;
     if (filter.type && q.type !== filter.type) return false;
     if (filter.gradedOnly && q.selfGraded) return false;
@@ -187,7 +193,7 @@ const nextAction = (areas: AreaReadiness[]): Readiness['nextAction'] => {
   if (totalAttempted === 0) {
     return {
       label: 'Start your first drill',
-      detail: `${DRILLABLE_UNIQUE.length} questions, none attempted. Twenty now gives the dashboard something to measure.`,
+      detail: `${drillableUnique.length} questions, none attempted. Twenty now gives the dashboard something to measure.`,
       href: '#/drill',
     };
   }
@@ -342,7 +348,7 @@ export const weakQuestions = (progress: ProgressMap, opts: WeakOptions = {}): Qu
   const minWrong = opts.minWrong ?? 2;
   const scored: { q: Question; record: ProgressRecord; shaky: boolean }[] = [];
 
-  for (const q of DRILLABLE_UNIQUE) {
+  for (const q of drillableUnique) {
     if (opts.area && q.skillArea !== opts.area) continue;
     if (opts.subtopic && q.subtopic !== opts.subtopic) continue;
     const record = progress.get(q.contentHash);
@@ -438,7 +444,7 @@ export const sessionStats = (
   const totalAttempts = verdicts.length;
   const recent = verdicts.slice(-ROLLING_WINDOW);
   const activeDays = [...days.values()].filter((d) => d.attempts > 0).length;
-  const remaining = DRILLABLE_UNIQUE.length - seen.size;
+  const remaining = drillableUnique.length - seen.size;
   const left = daysToExam(now);
   const attemptsPerDay = activeDays === 0 ? 0 : totalAttempts / activeDays;
   const requiredPerDay = left === 0 ? remaining : Math.ceil(remaining / left);

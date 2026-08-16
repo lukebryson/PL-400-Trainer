@@ -1,13 +1,17 @@
-# Handoff — Phase 2 (build the app), feature-complete, unreviewed
+# Handoff — Phase 2 (build the app), feature-complete, reviewed
 
-Branch `phase-2-app`, three commits past `main`:
+Branch `phase-2-app`, four commits past `main`:
 
 - `0006e17` scaffold + contracts + **the contentHash fix**
 - `757727f` wave 3 — store, scheduling, selectors, renderers
 - `3d8e0e8` wave 4 — drill loop, dashboard, simulator, export
+- wave 5 — the review, and the five defects it found
 
-**Wave 5 is the review, and it is the next thing to do.** Jump to
-[Start here next session](#start-here-next-session-wave-5-the-review).
+**Wave 5 is done.** Jump to [Wave 5, as reviewed](#wave-5-as-reviewed) for what
+was found and what was deliberately left. **The branch is ready to merge to
+`main`.** The next thing to do is
+[sit a real drill session](#after-wave-5) — and there is one open judgement call
+on the blueprint weights that needs a decision, not code.
 
 **Read `AGENTS.md` first.** Conventions, commands and the corrected parsing facts.
 It contradicts `prompt.md` in several places and is the one to trust.
@@ -15,7 +19,7 @@ It contradicts `prompt.md` in several places and is the one to trust.
 Exam: **Thursday 17 September 2026**, pass mark 700/1000.
 
 State: `npx tsc -b --force` clean, `npm run build` clean, `npx vitest run`
-**161 passing**. `npm run dev` works.
+**164 passing**. `npm run dev` works.
 
 ---
 
@@ -204,66 +208,133 @@ but never listed).
 - **Do not `indexedDB.deleteDatabase` mid-test** while a `StoreProvider` is
   mounted — it blocks on the open handle and the hook times out. Use
   `store.resetAll()`.
+- **A window-level key handler registered from an effect closes over the render
+  that registered it, and key repeat outruns React.** Any handler that writes to
+  the schedule needs a synchronous guard *before* it touches state — a ref, not
+  a state flag, because a state flag is exactly what is stale. The drill's
+  `advanced` ref and the simulator's `submitted` ref are that guard. Four
+  attempts from one held Space is what it looks like when the guard is missing.
+- **Reverse-check any test written for a fix**: revert the fix, watch the test
+  fail, restore. All three wave-5 tests were checked this way. A test that
+  passes against the broken code pins nothing, and there is no way to know
+  which kind you have written without reverting.
 
 ---
 
-## Start here next session: wave 5, the review
+## Wave 5, as reviewed
 
-Nothing in wave 4 has been reviewed. **Never review an implementation in the
-session that wrote it** — the session that wrote this one is gone, so a fresh
-session is already a clean context; a read-only reviewer subagent owning nothing
-is better still.
+Reviewed in a clean context against the seven risk areas the wave-4 handoff
+named. Five real defects, all fixed on this branch; three of the seven risks
+turned out to be nothing, and the reasoning is recorded below so nobody spends
+an evening rediscovering it.
 
-Claude Code will not spawn a subagent unless you ask for one in as many words.
-So either say *"spawn a read-only reviewer subagent for wave 5"*, or run
-`/code-review high` against the branch, or just review it inline in the new
-session — all three are clean contexts. Whichever way, the reviewer **owns
-nothing and edits nothing**; findings come back as a list and the fixes are a
-separate decision.
+Every fix is pinned by a test that was **checked to fail without it** — the
+three fixes were reverted, the tests run, and each failed with exactly the
+defect it describes. That check is why the ordering bug is stated as fact
+rather than as a reading of the code.
 
-### Where the risk actually is, in priority order
+### Fixed
 
-1. **`SimulatorPage.tsx`, the timer and auto-submit path.** `remaining` is
-   recomputed on every render, so the `remaining <= 0` effect re-runs on every
-   render and is guarded only by `sitting`. Check it cannot submit twice, and
-   check what happens if the tab is backgrounded past the deadline.
-2. **`DrillPage.tsx`, `advance()`.** The attempt write and the box-move append
-   are async while the state transition is synchronous. On the last card the
-   summary renders before the final `recordAttempt` resolves, so
-   `DrillSummary`'s "N moved up a box" line can be momentarily one short. Decide
-   whether that flicker is worth closing.
-3. **`DrillPage.tsx`, `endEarly()`.** A card that has been submitted but not
-   advanced past is discarded — deliberate, since confidence was never chosen,
-   but nobody has argued the other side. Worth a second opinion.
-4. **`DrillPage.tsx`, the keyboard effect.** It re-registers on every `run`
-   change and closes over `run`, `advance`, `submit`, `patchCard`. Check for a
-   stale closure on the boundary between submit and advance.
-5. **The dashboard's arithmetic against `selectors.ts`.** The page restates
-   thresholds in copy (`green ≥ 0.75`, `amber ≥ 0.55`, the `0.6 + 0.4 ×
-   coverage` formula). Confirm the prose and the code still agree; they are two
-   sources of truth for one number and they will drift.
-6. **`scaleScore` versus `readiness`.** Two blueprint-weighted scores on one
-   0–1000 scale, computed by different code in different files. They should
-   disagree only because one measures a sitting and the other measures all
-   history — not because the arithmetic differs.
-7. **Accessibility of the drill.** Every control is reachable, but the
-   window-level key handler and the sticky action bar have not been tested with
-   a screen reader or at 200% zoom.
+1. **The dashboard ordered the skill-area table by a crossed comparator.**
+   `b.weight * (1 - areaScore(a)) - a.weight * (1 - areaScore(b))` mixes one
+   area's weight with another's shortfall. It is not a comparator at all, and
+   the table under the heading "ordered by what an hour buys" put a
+   twelve-for-twelve `extend-platform` **first** and five untouched areas below
+   it. The single most load-bearing piece of advice on the dashboard was
+   inverted. Now `shortfallValue(b) - shortfallValue(a)`, pinned by
+   `DashboardPage.test.tsx`.
+2. **A held Space recorded four attempts on one card.** The drill's keydown
+   listener is registered from an effect that re-runs on `run`, so it closes
+   over the run of the render that registered it. Key repeat fires about every
+   33ms — faster than React swaps the listener — so each repeat called
+   `advance()` with the same stale `run`. Measured: **four attempts written for
+   one answer**, which walks a card from box 1 to box 5 on a single correct
+   guess, and the second `setRun` overwrote the first so a result was lost too.
+   `advance` now takes a synchronous `sessionId:index` token before touching
+   any state. Pinned by dispatching four keydowns inside one `act`, which
+   reproduces the race exactly.
+3. **The simulator could post 40–60 attempts twice.** Same class, lower odds:
+   the auto-submit effect alone cannot double-fire, but a Confirm click racing
+   the deadline, or a double-click on Confirm, would. Guarded by a `submitted`
+   ref on the session id.
+4. **A malformed backup bricked the app permanently.** `isDbDump` checks the
+   envelope and never looks inside the arrays, and `importJson` checked only
+   that `contentHash` was a string. A record with no `attempts` array was
+   written into IndexedDB and thereafter threw on `record.attempts.length` on
+   every load — taking the dashboard, the drill and the export with it, on
+   every reload, because it is persisted. A truncated file was enough.
+   `isProgressRecord` and `isSession` now validate every element; malformed
+   ones count as skipped, which is already a reported outcome.
+5. **The simulator's own copy claimed a falsehood.** "It is the same arithmetic
+   as the dashboard projection" — it is not. `scaleScore` drops the
+   `0.6 + 0.4 × coverage` factor and renormalises over the areas actually
+   asked; `readiness` keeps the coverage factor and counts an untouched area as
+   zero. Both are right for their job. The copy now says which is which and
+   that the sitting score should read higher.
 
-### Definition of done for wave 5
+Plus two smaller ones found on the way: the simulator charged an entire
+backgrounded interval to whichever card was on screen (`takeSpent` now clamps
+at five times the per-question budget), and the drill announced nothing to a
+screen reader on reveal, because submitting moves no focus — there is now a
+`role="status"` live region carrying the verdict.
 
-Findings triaged into fix-now and won't-fix-and-why, the fix-now set applied on
-this branch, `npx tsc -b --force` / `npm run build` / `npx vitest run` still
-clean, and this file updated. Then the branch is ready to merge to `main`.
+### Looked at and deliberately left
+
+- **The simulator's auto-submit cannot fire twice.** Effects run once per
+  commit, `sitting` is false by the next one, and StrictMode double-invokes
+  effects only on mount — when `paper` is still null. Backgrounding the tab past
+  the deadline is handled correctly: the clock is wall-clock against a stored
+  deadline, so the paper auto-submits on return. Only the stopwatch needed the
+  clamp above.
+- **`DrillSummary`'s "N moved up a box" is never one short.** The handoff
+  worried the summary renders before the final `recordAttempt` resolves.
+  `store.recordAttempt` commits to memory synchronously and only *then* fires
+  the IndexedDB write behind `void persist(...)`, so its promise settles on the
+  next microtask, before paint. Nothing to close.
+- **`endEarly()` discarding a submitted-but-unadvanced card is right.**
+  Confidence is chosen after the reveal. Recording that card would post it as
+  whatever the default was, which is precisely the failure the "record on
+  advance, not on submit" rule exists to prevent. Second opinion: keep it.
+- **The dashboard prose and `selectors.ts` still agree** on `green ≥ 0.75`,
+  `amber ≥ 0.55` and `accuracy × (0.6 + 0.4 × coverage)`. Checked line by line.
+- **Accessibility beyond the live region is unverified.** `aria-pressed`,
+  `role="group"` and the labels are all present and correct in the markup, but
+  nothing here has been driven by an actual screen reader or checked at 200%
+  zoom. Static reading is not a substitute; treat this as unaudited.
+
+### One judgement call, open — needs a decision, not code
+
+**`integrations` carries `weight: 0.175` against its own displayed band of
+10–15%.** The four light areas sit at 0.125 and `extend-platform` at 0.325, so
+the residual needed to reach 1.0 was dumped entirely on `integrations`. The
+simulator's setup table prints "Develop integrations · 10–15% · ~9 questions"
+for a 50-question paper — 9 of 50 is 17.5%, outside the band printed on the
+same row.
+
+Not fixed, because every route out changes something real:
+
+- move the residual onto `extend-platform` (0.325 → 0.375) and it leaves *its*
+  band of 30–35%;
+- spread it across all six and every area drifts off its midpoint;
+- widen the printed band and the table stops being the blueprint.
+
+Changing any weight changes simulator sampling, `scaleScore` and every
+projected score already recorded. That is the user's call. Until it is made,
+the setup table shows a row that contradicts itself.
 
 ### After wave 5
 
 In the order they earn their keep before 17 September:
 
+0. **Decide the `integrations` weight**, above. One line of `types.ts`, but it
+   moves every score.
 1. **Sit a real drill session and a real simulator paper.** Everything above is
    tested; none of it has been *used*. An hour of actual revision will find more
    than another pass of review will, particularly on whether the 122
-   self-graded cards are worth anything in practice.
+   self-graded cards are worth anything in practice. Wave 5 found four
+   defects that only a reader would catch and one — the held Space — that only
+   a *user* would have caught; that ratio is the argument for drilling next
+   rather than reviewing again.
 2. **Phase 3, currency verification.** 187 questions flagged, none checked.
    Priority order in `prompt.md`, verify against live Microsoft Learn via the
    `microsoft-learn` MCP server, and mark anything unresolved `unverified`

@@ -13,9 +13,10 @@
  * Owned by the features agent.
  */
 import { useMemo } from 'react';
-import { brokenKeys, deadEnds, drillable, questions } from '../../lib/bank';
+import { brokenKeys, deadEnds, questions } from '../../lib/bank';
 import {
   areaScore,
+  drillableUnique,
   dueQuestions,
   readiness,
   sessionStats,
@@ -27,6 +28,14 @@ import { PASS_MARK, type AreaReadiness, type Rag } from '../../types';
 import './dashboard.css';
 
 const pct = (n: number): string => `${Math.round(n * 100)}%`;
+
+/**
+ * What an hour in this area buys. Both operands must come from the *same* area:
+ * writing `b.weight * (1 - areaScore(a))` reads plausibly and is not a
+ * comparator at all — it ranked a 32.5% area scoring 0.97 above a 12.5% area
+ * scoring 0.14, which is the opposite of the advice the table claims to give.
+ */
+const shortfallValue = (a: AreaReadiness): number => a.weight * (1 - areaScore(a));
 
 const RAG_WORD: Record<Rag, string> = {
   green: 'would pass comfortably',
@@ -159,7 +168,7 @@ export function DashboardPage(_props: PageProps) {
           </thead>
           <tbody>
             {[...r.areas]
-              .sort((a, b) => b.weight * (1 - areaScore(a)) - a.weight * (1 - areaScore(b)))
+              .sort((a, b) => shortfallValue(b) - shortfallValue(a))
               .map((a) => (
                 <AreaRow key={a.area} area={a} />
               ))}
@@ -185,7 +194,7 @@ export function DashboardPage(_props: PageProps) {
             <span className="label">Seen at least once</span>
             <p className="figure num">
               {stats.distinctSeen}
-              <span className="tiny faint"> / {drillable.length}</span>
+              <span className="tiny faint"> / {drillableUnique.length}</span>
             </p>
           </div>
           <div>

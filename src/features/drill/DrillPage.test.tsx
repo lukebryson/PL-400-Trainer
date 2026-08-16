@@ -9,7 +9,7 @@
  *  - the attempt is written on advance, with the confidence chosen after the
  *    reveal — not on submit, with whatever the default was.
  */
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { act, cleanup, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createElement, type ReactNode } from 'react';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
@@ -175,6 +175,35 @@ describe('the drill loop', () => {
     await userEvent.keyboard(' ');
 
     await waitFor(() => expect(peek.sessions).toHaveLength(1));
+  });
+
+  /**
+   * Key repeat fires keydown about every 33ms, faster than React can swap the
+   * listener the effect registered — so the repeat runs `advance` again with
+   * the *same* stale `run`. Two `keydown`s inside one `act` reproduce that
+   * exactly: no re-render happens between them. Unguarded, the attempt is
+   * posted to the schedule twice and the card is promoted two boxes on one
+   * answer.
+   */
+  it('records one attempt when Space is held down, not one per repeat', async () => {
+    drill();
+    await start();
+
+    const first = onScreen();
+    await pressOption(first, first.correct[0]!);
+    await userEvent.keyboard('{Enter}');
+    await waitFor(() => expect(screen.getByText('Correct')).toBeTruthy());
+
+    await act(async () => {
+      for (let i = 0; i < 4; i++) {
+        window.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true }));
+      }
+    });
+
+    await waitFor(() => expect(peek.progress.size).toBe(1));
+    const record = peek.progress.get(first.contentHash)!;
+    expect(record.attempts).toHaveLength(1);
+    expect(record.box).toBe(2);
   });
 
   it('does not serve a card the schedule has pushed out', async () => {

@@ -90,6 +90,19 @@ export function DrillPage({ params }: PageProps) {
 
   const cardStart = useRef<number>(Date.now());
   const seenCases = useRef<Set<string>>(new Set());
+  /**
+   * The card `advance` has already committed, as `sessionId:index`.
+   *
+   * The keydown listener is registered from an effect that re-runs on every
+   * `run` change, so it closes over the run of the render that registered it.
+   * Hold Space down and the browser repeats keydown about every 33ms — faster
+   * than React can swap the listener — and the second repeat calls `advance`
+   * with the *same* stale `run`: the attempt is posted to the schedule twice,
+   * both moves land in the summary, and the second `setRun` overwrites the
+   * first so one result is lost. Same for a double-click on Next. This is set
+   * synchronously, before any state is touched, so the repeat is a no-op.
+   */
+  const advanced = useRef<string>('');
 
   const current = run && !run.finished ? run.questions[run.index] : undefined;
   const card = run && !run.finished ? run.cards[run.index] : undefined;
@@ -111,6 +124,7 @@ export function DrillPage({ params }: PageProps) {
       setOpenCases(new Set());
       seenCases.current = new Set();
       cardStart.current = Date.now();
+      advanced.current = '';
       setRun({
         session: startSession(modeFor(filter)),
         questions,
@@ -150,6 +164,12 @@ export function DrillPage({ params }: PageProps) {
     const q = run.questions[run.index];
     const c = run.cards[run.index];
     if (!q || !c || c.grade === null) return;
+
+    // Before anything else, and synchronously: see `advanced` above.
+    const token = `${run.session.id}:${run.index}`;
+    if (advanced.current === token) return;
+    advanced.current = token;
+
     const verdict = c.grade;
 
     const fromBox = store.progress.get(q.contentHash)?.box ?? 1;
@@ -351,6 +371,24 @@ export function DrillPage({ params }: PageProps) {
       <p className="tiny faint" style={{ margin: 0 }}>
         {describeFilter(filter)}
       </p>
+
+      {/*
+        The verdict is a colour change and a badge inside the card — nothing a
+        screen reader is told about, because submitting moves no focus. The
+        region is always in the DOM so the change is announced as an update
+        rather than as an insertion, which some readers skip.
+      */}
+      <div className="visually-hidden" role="status" aria-live="polite">
+        {revealed && c.grade
+          ? `${
+              c.grade.ungradeable
+                ? 'Not gradeable'
+                : c.grade.correct
+                  ? 'Correct'
+                  : 'Not correct'
+            }. Rate your confidence one to three, then Space for the next card.`
+          : ''}
+      </div>
 
       <QuestionCard
         question={q}

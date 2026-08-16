@@ -56,6 +56,59 @@ const sameRecord = (a: ProgressRecord, b: ProgressRecord): boolean =>
   });
 
 /**
+ * `isDbDump` checks the envelope; it does not look inside the arrays. A record
+ * that survives it with no `attempts` array is written straight into IndexedDB
+ * and then read back on every load, where `record.attempts.length` throws and
+ * takes the dashboard, the drill and the export with it — permanently, because
+ * it is persisted. A truncated or hand-edited backup is enough to do it. So
+ * every element is checked before it is trusted, and anything malformed is
+ * counted as skipped rather than imported.
+ */
+const isProgressRecord = (value: unknown): value is ProgressRecord => {
+  if (typeof value !== 'object' || value === null) return false;
+  const r = value as Partial<ProgressRecord>;
+  return (
+    typeof r.contentHash === 'string' &&
+    typeof r.box === 'number' &&
+    r.box >= 1 &&
+    r.box <= 5 &&
+    typeof r.dueAt === 'number' &&
+    Number.isFinite(r.dueAt) &&
+    typeof r.timesWrong === 'number' &&
+    Array.isArray(r.attempts) &&
+    r.attempts.every(
+      (a) =>
+        typeof a === 'object' &&
+        a !== null &&
+        typeof a.at === 'number' &&
+        typeof a.correct === 'boolean' &&
+        (a.confidence === 'guessed' || a.confidence === 'unsure' || a.confidence === 'confident'),
+    ) &&
+    (r.correction === null || typeof r.correction === 'string') &&
+    (r.notes === null || typeof r.notes === 'string')
+  );
+};
+
+/** Same reasoning: `sessionStats` iterates `session.results` unguarded. */
+const isSession = (value: unknown): value is Session => {
+  if (typeof value !== 'object' || value === null) return false;
+  const s = value as Partial<Session>;
+  return (
+    typeof s.id === 'string' &&
+    typeof s.startedAt === 'number' &&
+    Array.isArray(s.results) &&
+    s.results.every(
+      (r) =>
+        typeof r === 'object' &&
+        r !== null &&
+        typeof r.contentHash === 'string' &&
+        typeof r.correct === 'boolean' &&
+        typeof r.skillArea === 'string',
+    )
+  );
+};
+
+/**
  * Merge two histories of the same question. Attempts are unioned on timestamp,
  * so importing a backup taken mid-session on another machine adds what it knows
  * without dropping what this machine knows. The schedule comes from whichever
@@ -219,7 +272,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       // an older bank still binds, because the hash is derived from the stem.
       const nextProgress = new Map(progressRef.current);
       for (const incoming of parsed.progress) {
-        if (typeof incoming?.contentHash !== 'string') {
+        if (!isProgressRecord(incoming)) {
           skipped += 1;
           continue;
         }
@@ -236,7 +289,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const nextSessions = [...sessionsRef.current];
       const known = new Set(nextSessions.map((s) => s.id));
       for (const s of parsed.sessions) {
-        if (typeof s?.id !== 'string' || known.has(s.id)) {
+        if (!isSession(s) || known.has(s.id)) {
           skipped += 1;
           continue;
         }
