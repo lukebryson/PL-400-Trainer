@@ -72,6 +72,18 @@ brief**, and re-measure before contradicting it.
   the 6 real PNGs at 0.17–0.35. Real answer areas are almost always JPEG.
 - After filtering: 501 unique images, covering 97 of 101 hotspot and 89 of 90
   dragdrop questions — the types that actually need them.
+- **`contentHash` cannot be derived from the stem alone.** The dump repeats a
+  scenario with different option sets — six times over for one rollup-field
+  question — so a stem-only hash collided 41 questions into 16 groups, and every
+  group shared one progress record: drilling q93 marked five other questions as
+  answered. The hash covers type, stem, option texts, ordered box answers and the
+  **content digests** of the images. It deliberately excludes the answer key,
+  explanation and references, because those are what Phase 3 corrects and a
+  correction must not orphan its own question's history. It hashes image *bytes*,
+  not paths, because filenames carry the question id. Result: 437 distinct hashes.
+- **Three pairs are true duplicates** — 402/410, 403/411, 409/412, identical in
+  type, stem, options and key. They hash alike by design; answering one really is
+  answering the other. Drill selection shows them once.
 - `pandoc` and `pdftoppm` are **not installed**; `pdftotext` 4.00 is. The pipeline is
   stdlib-only Python and needs no `pip install`.
 
@@ -97,6 +109,20 @@ patched: q182 states `Answer: H` with only options A–F, and q266 above.
 Zero other answer keys reference a non-existent option. If a change makes that
 untrue, the parser regressed.
 
+`answerDisagreement` is null for all 440 — not a bug. Wherever both sources
+carried a key, the PDF and the DOCX agreed. The reconciliation in `03_merge.py`
+is real and the notice that renders it is built; nothing has tripped it.
+
+`codeBlock` is null for all 440 — this one *is* a gap. `03_merge.py` hardcodes
+`codeBlock=None` and no stage ever populates it, yet 67 questions carry code in
+the stem or explanation (`IPlugin`, `IOrganizationService`, `Xrm.`, `formContext`,
+FetchXML). The code is not lost — it renders inline, with indentation intact,
+because the stem is `white-space: pre-wrap` — but it is unhighlighted and
+undifferentiated from prose. `CodeBlock.tsx` exists and is tested against
+synthetic input, waiting for a producer. Extracting the runs reliably means
+segmenting plain text without corrupting the surrounding stem; it is a real
+piece of work, not a one-liner.
+
 ## Architecture
 
 - `pipeline/` — Python extraction. `schema.py` is the shared record contract; every
@@ -121,15 +147,19 @@ through the orchestrator.
 
 | Wave | Agent | Owns | Depends on |
 | --- | --- | --- | --- |
-| 0 | orchestrator | `schema.py`, `src/types.ts` | — |
+| 0 | orchestrator | `schema.py`, `src/types.ts`, `src/lib/{bank,grade,store-contract}.ts`, `src/{App.tsx,router.ts,styles.css}`, build config | — |
 | 1 | pdf-extractor | `pipeline/01_extract_pdf.py` | schema |
 | 1 | docx-extractor | `pipeline/02_extract_docx.py` | schema |
 | 2 | merger | `pipeline/03_merge.py`, `04_classify.py`, `rules.py` | wave 1 |
-| 3 | store | `src/lib/` (IndexedDB, Leitner, selectors) | types |
+| 3 | store | `src/lib/` except the three orchestrator files above | types |
 | 3 | renderers | `src/components/question/` | types |
 | 4 | features | `src/features/{dashboard,simulator,drill}/` | store |
 | 4 | export | `src/features/export/`, currency banner | store |
 | 5 | reviewer | nothing — read-only audit | all |
+
+`bank.ts`, `grade.ts` and `store-contract.ts` are contracts, not implementation:
+the renderers and the features both bind to them, so they land before the fork and
+nobody edits them afterwards.
 
 Waves 1, 3 and 4 run in parallel. Review always runs in a **clean context** — never
 review an implementation in the session that wrote it.

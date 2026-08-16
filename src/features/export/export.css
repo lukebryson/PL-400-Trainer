@@ -1,0 +1,124 @@
+/*
+ * Export page only. The design system lives in `src/styles.css` and is owned by
+ * the orchestrator — nothing here redefines a token, it only lays out this page
+ * and adds the A5 print rules.
+ */
+
+.export-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.export-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+}
+
+.export-field select,
+.export-field input[type='number'] {
+  width: auto;
+  min-width: 150px;
+}
+
+.export-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+
+.export-check input {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Density readout — the numbers that make "condensed enough" checkable. */
+.density {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: baseline;
+}
+
+.density > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.density .figure {
+  font-size: 19px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.density .figure.over {
+  color: var(--warn);
+}
+
+.export-md {
+  min-height: 340px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.5;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  resize: vertical;
+}
+
+.dispute-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dispute-list p {
+  margin: 2px 0 0;
+}
+
+/* The printable sheet: rendered off-screen, revealed only by the print rules. */
+.print-sheet {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A5;
+    margin: 12mm;
+  }
+
+  /* Visibility rather than display, so the sheet's ancestors stay in flow. */
+  body * {
+    visibility: hidden;
+  }
+
+  .print-sheet,
+  .print-sheet * {
+    visibility: visible;
+  }
+
+  .print-sheet {
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: #fff;
+    font-family: var(--mono);
+    font-size: 9.5pt;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}

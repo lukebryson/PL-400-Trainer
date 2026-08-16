@@ -176,14 +176,54 @@ class CaseStudy:
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
 
-def content_hash(stem: str) -> str:
+def image_digest(path: str) -> str:
+    """Content address for one image, so identity never smuggles in the question id.
+
+    Image filenames are derived from the id (`q7-1.jpeg`), so hashing the *path*
+    would reintroduce exactly the positional dependency `content_hash` exists to
+    avoid. Hash the bytes instead.
+    """
+    return hashlib.sha256((IMAGES.parent / path).read_bytes()).hexdigest()[:12]
+
+
+def content_hash(
+    *,
+    qtype: str,
+    stem: str,
+    options: Iterable[Any] = (),
+    box_answers: Iterable[Any] = (),
+    image_digests: Iterable[str] = (),
+) -> str:
     """Stable identity for a question, used as the IndexedDB progress key.
 
-    Derived from normalised stem text, NOT from the question id or file position,
-    so renumbering or re-merging the bank does not orphan the user's study history.
-    Changing this function invalidates real progress data — don't, without a migration.
+    Derived from what a human would call "the same question" — NOT from the id or
+    file position — so renumbering or re-merging the bank does not orphan the
+    user's study history. Changing this function invalidates real progress data;
+    don't, without a migration.
+
+    Included: type, stem, the option texts, the ordered box answers, and the
+    content digests of the images. Forty-one questions share a stem with another
+    (the dump repeats a scenario with different choices, six times over for one
+    rollup-field question), so a stem-only hash silently merged their progress
+    records: drilling one marked five others as answered. Everything that
+    distinguishes one variant from another has to be in here.
+
+    Deliberately excluded: the answer key, the explanation, the references and the
+    currency flags. Those are exactly the fields Phase 3 will correct, and a
+    correction must not orphan the history attached to the question it corrects.
+
+    Three pairs (402/410, 403/411, 409/412) are true duplicates — identical type,
+    stem, options and key — and so hash alike by design. Answering one really does
+    mean you have answered the other; the drill selector shows them once.
     """
-    normalised = re.sub(r"\s+", " ", stem).strip().lower()
+    parts = [
+        qtype,
+        stem,
+        *(f"{o.key}:{o.text}" for o in options),
+        *(f"{b.box}:{b.answer}" for b in box_answers),
+        *image_digests,
+    ]
+    normalised = re.sub(r"\s+", " ", "\x01".join(parts)).strip().lower()
     return hashlib.sha256(normalised.encode("utf-8")).hexdigest()[:16]
 
 
