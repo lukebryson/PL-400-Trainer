@@ -25,19 +25,39 @@ export type SkillAreaKey =
   | 'integrations';
 
 /**
- * March 2026 blueprint. Drives simulator sampling and dashboard weighting, so
- * `weight` must sum to 1. `extend-platform` deliberately dominates.
+ * Blueprint as of 19 March 2026, verified against the published study guide.
+ * Drives simulator sampling and dashboard weighting, so `weight` must sum to 1.
+ * `extend-platform` deliberately dominates.
+ *
+ * The bands are Microsoft's and are not negotiable. Their midpoints sum to
+ * **95%**, not 100% — five areas at 12.5 plus one at 32.5 — so 5pp of residual
+ * has to go somewhere, and that is the only real decision in this table.
+ *
+ * It is resolved by scaling every midpoint by the same factor, `1 / 0.95`:
+ *
+ *   light areas   0.125 / 0.95 = 5/38  = 13.16%, inside 10–15
+ *   extend-platform 0.325 / 0.95 = 13/38 = 34.21%, inside 30–35
+ *   5 × 5/38 + 13/38 = 38/38 = 1 exactly
+ *
+ * Every area therefore lands inside its own published band, and the relative
+ * weighting is untouched: `extend-platform` stays exactly 2.6× each other area.
+ * Dumping the whole residual on one area does not have that property — it was
+ * previously all on `integrations`, which put it at 17.5% against a band of
+ * 10–15% and made the simulator's setup table contradict its own row.
+ *
+ * `blueprint.test.ts` pins all three properties. Do not round these to tidier
+ * numbers; the untidiness is the point.
  */
 export const SKILL_AREAS: Record<
   SkillAreaKey,
   { label: string; band: [number, number]; weight: number }
 > = {
-  'technical-design': { label: 'Create a technical design', band: [10, 15], weight: 0.125 },
-  'build-solutions': { label: 'Build Power Platform solutions', band: [10, 15], weight: 0.125 },
-  'apps-improvements': { label: 'Implement Power Apps improvements', band: [10, 15], weight: 0.125 },
-  'extend-ux': { label: 'Extend the user experience', band: [10, 15], weight: 0.125 },
-  'extend-platform': { label: 'Extend the platform', band: [30, 35], weight: 0.325 },
-  integrations: { label: 'Develop integrations', band: [10, 15], weight: 0.175 },
+  'technical-design': { label: 'Create a technical design', band: [10, 15], weight: 5 / 38 },
+  'build-solutions': { label: 'Build Power Platform solutions', band: [10, 15], weight: 5 / 38 },
+  'apps-improvements': { label: 'Implement Power Apps improvements', band: [10, 15], weight: 5 / 38 },
+  'extend-ux': { label: 'Extend the user experience', band: [10, 15], weight: 5 / 38 },
+  'extend-platform': { label: 'Extend the platform', band: [30, 35], weight: 13 / 38 },
+  integrations: { label: 'Develop integrations', band: [10, 15], weight: 5 / 38 },
 };
 
 export const EXAM_DATE = new Date('2026-09-17T00:00:00Z');

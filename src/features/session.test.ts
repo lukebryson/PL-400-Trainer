@@ -39,30 +39,51 @@ describe('scaleScore', () => {
    * The whole reason this is not `correct / total`: the exam's weighting, not
    * the paper's mix, decides what a mistake costs.
    */
-  it('weights by the blueprint, not by how many of each area were drawn', () => {
-    // Everything right except `extend-platform`, which is 32.5% of the exam.
-    const spec = Object.fromEntries(
-      ALL_AREAS.map((a) => [a, a === 'extend-platform' ? [0, 10] : [10, 0]]),
-    ) as Record<SkillAreaKey, [number, number]>;
-    expect(scaleScore(results(spec))).toBe(675);
+  /**
+   * Sit a paper that is perfect except in one area, and the score must be
+   * `1000 × (1 − that area's blueprint weight)` — every area was asked, so
+   * there is nothing to renormalise. Stated as the model rather than as a
+   * literal, because renormalising the blueprint changes every one of these
+   * numbers and a test full of magic constants would then have to be edited
+   * into agreement with whatever the code now does.
+   */
+  const allRightExcept = (wrongArea: SkillAreaKey) =>
+    scaleScore(
+      results(
+        Object.fromEntries(
+          ALL_AREAS.map((a) => [a, a === wrongArea ? [0, 10] : [10, 0]]),
+        ) as Record<SkillAreaKey, [number, number]>,
+      ),
+    );
 
-    // The same number of wrong answers in a 12.5% area costs far less.
-    const light = Object.fromEntries(
-      ALL_AREAS.map((a) => [a, a === 'extend-ux' ? [0, 10] : [10, 0]]),
-    ) as Record<SkillAreaKey, [number, number]>;
-    expect(scaleScore(results(light))).toBe(875);
+  it('weights by the blueprint, not by how many of each area were drawn', () => {
+    for (const area of ALL_AREAS) {
+      expect(allRightExcept(area)).toBe(Math.round(1000 * (1 - SKILL_AREAS[area].weight)));
+    }
+
+    // And the dominant area really does cost more than a light one: 2.6x, the
+    // ratio the blueprint sets. Approximate because `scaleScore` rounds to
+    // whole marks — the penalties are 342 and 132, which is 2.59, not 2.60.
+    const heavy = 1000 - allRightExcept('extend-platform');
+    const light = 1000 - allRightExcept('extend-ux');
+    expect(heavy / light).toBeCloseTo(2.6, 1);
   });
 
   it('does not let an oversampled area buy the score back', () => {
-    // Forty easy `extend-platform` questions right, one light area wrong: the
-    // score is still 87.5%, because weight comes from the blueprint.
+    // Forty easy `extend-platform` questions right, one light area wrong. The
+    // forty must buy nothing: the penalty is the light area's blueprint weight,
+    // exactly as if it had been asked twice.
     const spec = Object.fromEntries(
       ALL_AREAS.map((a) => [
         a,
         a === 'extend-platform' ? [40, 0] : a === 'extend-ux' ? [0, 2] : [2, 0],
       ]),
     ) as Record<SkillAreaKey, [number, number]>;
-    expect(scaleScore(results(spec))).toBe(875);
+    expect(scaleScore(results(spec))).toBe(
+      Math.round(1000 * (1 - SKILL_AREAS['extend-ux'].weight)),
+    );
+    // Same figure as the evenly-sampled paper above — that is the whole point.
+    expect(scaleScore(results(spec))).toBe(allRightExcept('extend-ux'));
   });
 
   /**
