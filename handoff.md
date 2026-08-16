@@ -4,7 +4,7 @@ Branch `phase-2-app`, three commits past `main`:
 
 - `0006e17` scaffold + contracts + **the contentHash fix**
 - `757727f` wave 3 — store, scheduling, selectors, renderers
-- `HEAD` wave 4 — drill loop, dashboard, simulator, export
+- `3d8e0e8` wave 4 — drill loop, dashboard, simulator, export
 
 **Wave 5 is the review, and it is the next thing to do.** Jump to
 [Start here next session](#start-here-next-session-wave-5-the-review).
