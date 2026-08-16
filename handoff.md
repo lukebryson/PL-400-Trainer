@@ -1,25 +1,62 @@
-# Handoff — Phase 2 (build the app), feature-complete, reviewed
+# Handoff — Phase 2 complete and reviewed; Phase 3 not started
 
-Branch `phase-2-app`, four commits past `main`:
+Exam: **Thursday 17 September 2026**, pass mark 700/1000.
+
+Branch `phase-2-app`, five commits past `main`:
 
 - `0006e17` scaffold + contracts + **the contentHash fix**
 - `757727f` wave 3 — store, scheduling, selectors, renderers
 - `3d8e0e8` wave 4 — drill loop, dashboard, simulator, export
 - `7e0f560` wave 5 — the review, and the five defects it found
-
-**Wave 5 is done.** Jump to [Wave 5, as reviewed](#wave-5-as-reviewed) for what
-was found and what was deliberately left. **The branch is ready to merge to
-`main`.** The next thing to do is
-[sit a real drill session](#after-wave-5) — and there is one open judgement call
-on the blueprint weights that needs a decision, not code.
-
-**Read `AGENTS.md` first.** Conventions, commands and the corrected parsing facts.
-It contradicts `prompt.md` in several places and is the one to trust.
-
-Exam: **Thursday 17 September 2026**, pass mark 700/1000.
+- `f0b0cdb` handoff pointer
 
 State: `npx tsc -b --force` clean, `npm run build` clean, `npx vitest run`
-**164 passing**. `npm run dev` works.
+**164 passing**. `npm run dev` works. **The branch is ready to merge to `main`**
+and nothing is known to be broken.
+
+### Which file to read
+
+- **`AGENTS.md` first, always.** Conventions, commands, architecture and the
+  corrected parsing facts. It contradicts `prompt.md` in several places and is
+  the one to trust.
+- **`README.md`** — what the app is and how it hangs together, written for a
+  human rather than for an agent. Read it if you have not seen the project
+  before; skip it if you have.
+- **This file** — state, decisions already taken, and what is open.
+- **`prompt.md`** — the original brief. Historical only; several of its figures
+  are extraction artefacts.
+
+---
+
+## Start here next session
+
+Phase 2 is finished and reviewed. Nothing below is blocked on more building.
+In the order these earn their keep before 17 September:
+
+**1. Decide the `integrations` weight.** One line of `src/types.ts`, but it
+moves every score in the app, so it is a decision rather than a task. The case
+is written up under [one judgement call](#one-judgement-call-open--needs-a-decision-not-code).
+Do this first — it is cheap, and every drill session sat before it is decided
+records scores against the old weighting.
+
+**2. Sit a real drill session and a real simulator paper.** This is the highest
+value thing left and it is not a coding task. Everything in the app is tested;
+none of it has been *used*. Wave 5 found four defects a reader could catch and
+one — four attempts from a held Space — that only a user would have. That ratio
+is the argument for drilling next rather than reviewing again.
+
+The specific question an hour of drilling answers: **are the 122 self-graded
+cards worth anything in practice?** If they are not, the fix is manual
+transcription of those answer images, which is a real cost and needs raising in
+good time rather than in September.
+
+**3. Phase 3, currency verification.** 187 questions flagged heuristically,
+none checked. Priority order in `prompt.md`; verify against live Microsoft Learn
+via the `microsoft-learn` MCP server, and mark anything unresolved `unverified`
+rather than guessing. This is the largest remaining piece of work.
+
+**4. Everything else**, only if drilling shows it is missed — see
+[after wave 5](#after-wave-5).
 
 ---
 
@@ -35,9 +72,15 @@ State: `npx tsc -b --force` clean, `npm run build` clean, `npx vitest run`
 | Dashboard | `src/features/dashboard/` — projection, RAG per area, velocity, bank health |
 | Simulator | `src/features/simulator/` — timed, blueprint-sampled, silent until submit |
 | Export | `src/features/export/` — A5 sheet, JSON backup/restore, currency page |
+| Docs | `README.md` (human-facing), `AGENTS.md` (the source of truth), this file |
 
 Dependencies are still react + react-dom only. IndexedDB wrapper, router and
 syntax highlighter are hand-rolled.
+
+`README.md` states the scoring model, the bank's shape and the non-goals for a
+reader who has never seen the repo. It duplicates `AGENTS.md` in places by
+design — if the two disagree, `AGENTS.md` wins and the README is the one to
+correct.
 
 ---
 
@@ -324,26 +367,16 @@ the setup table shows a row that contradicts itself.
 
 ### After wave 5
 
-In the order they earn their keep before 17 September:
+The first three items are at the [top of this file](#start-here-next-session).
+What is left after those, and only if drilling shows it is missed:
 
-0. **Decide the `integrations` weight**, above. One line of `types.ts`, but it
-   moves every score.
-1. **Sit a real drill session and a real simulator paper.** Everything above is
-   tested; none of it has been *used*. An hour of actual revision will find more
-   than another pass of review will, particularly on whether the 122
-   self-graded cards are worth anything in practice. Wave 5 found four
-   defects that only a reader would catch and one — the held Space — that only
-   a *user* would have caught; that ratio is the argument for drilling next
-   rather than reviewing again.
-2. **Phase 3, currency verification.** 187 questions flagged, none checked.
-   Priority order in `prompt.md`, verify against live Microsoft Learn via the
-   `microsoft-learn` MCP server, and mark anything unresolved `unverified`
-   rather than guessing.
-3. **The remaining should-haves**, if the drilling shows they are missed: Learn
-   deep links per subtopic, and a session history list.
-4. **`codeBlock`**, only if the unhighlighted inline code proves genuinely hard
-   to read while revising. It is a real piece of work and it is not on the
-   critical path to a pass.
+- **The remaining should-haves**: Learn deep links per subtopic, and a session
+  history list. Sessions are already stored; nothing lists them.
+- **`codeBlock`**, only if the unhighlighted inline code proves genuinely hard
+  to read while revising. It is a real piece of work and it is not on the
+  critical path to a pass.
+
+Neither is worth starting before an hour of real drilling says it is wanted.
 
 ## Still open
 
