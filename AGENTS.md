@@ -139,6 +139,24 @@ Blueprint weights drive simulator sampling and dashboard scoring. Keys are fixed
 `technical-design`, `build-solutions`, `apps-improvements`, `extend-ux`,
 `extend-platform` (30–35%, the dominant band), `integrations`.
 
+**The weights are not the band midpoints.** Verified against the study guide as of
+19 March 2026, the published midpoints sum to **95%, not 100%** — five areas at 12.5
+plus `extend-platform` at 32.5 — so 5pp of residual has to be absorbed. Every
+midpoint is scaled by `1 / 0.95`, giving `5/38` for the five light areas and `13/38`
+for `extend-platform`. That sums to exactly 1, keeps every area inside its own
+published band, and preserves the 2.6× ratio between the dominant area and the rest.
+Putting the whole residual on one area does not: it previously sat entirely on
+`integrations`, which read 17.5% against a band of 10–15% and made the simulator's
+setup table contradict its own row. `src/lib/blueprint.test.ts` pins the sum, the
+bands and the scaling; `pipeline/schema.py` carries the same table and must not
+drift from `src/types.ts`.
+
+Because five areas now share a weight, ties in "what an hour buys" are the common
+case rather than the exotic one. `DashboardPage.byValueThenUnseen` and
+`selectors.nextAction` break them the same way — most unseen questions first, then
+label — because the page prints the next action directly above a table claiming the
+same ordering, and the two disagreeing is a visible contradiction.
+
 ## Parallel agent ownership
 
 Contracts land first, then agents fork. **No agent edits a file another owns**, and no

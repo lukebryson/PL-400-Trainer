@@ -185,8 +185,15 @@ export const readiness = (progress: ProgressMap, now: number = Date.now()): Read
 
 /**
  * One instruction, not a list. The area maximising `weight × shortfall` is the
- * one where an hour buys the most marks — a red area worth 12.5% can be worth
- * less than an amber one worth 32.5%.
+ * one where an hour buys the most marks — a red light area can be worth less
+ * than an amber `extend-platform`, which carries 2.6× the weight.
+ *
+ * Ties are now the common case, not the exotic one: five of the six areas carry
+ * the same blueprint weight, so an untouched board is a five-way tie. The
+ * tie-break must match `byValueThenUnseen` in `DashboardPage.tsx` — the page
+ * prints this as its single next action directly above a table claiming to be
+ * ordered by the same quantity, and the two disagreeing is the page
+ * contradicting itself in the space of one screen.
  */
 const nextAction = (areas: AreaReadiness[]): Readiness['nextAction'] => {
   const totalAttempted = areas.reduce((n, a) => n + a.attempted, 0);
@@ -198,11 +205,19 @@ const nextAction = (areas: AreaReadiness[]): Readiness['nextAction'] => {
     };
   }
 
+  const unseen = (a: AreaReadiness): number => a.total - a.attempted;
   let best: AreaReadiness | null = null;
   let bestValue = 0;
   for (const a of areas) {
     const value = a.weight * Math.max(0, TARGET_SCORE - areaScore(a));
-    if (value > bestValue) {
+    if (value <= 0) continue;
+    const better =
+      best === null ||
+      value > bestValue ||
+      (value === bestValue &&
+        (unseen(a) > unseen(best) ||
+          (unseen(a) === unseen(best) && a.label.localeCompare(best.label) < 0)));
+    if (better) {
       bestValue = value;
       best = a;
     }
@@ -297,6 +312,25 @@ export const allocateByBlueprint = (
  * a simulator you have to mark yourself does not give a score — and an area
  * only draws on its self-graded pool once the gradable one is exhausted.
  */
+/** Pool size per area — the ceiling a paper's allocation must respect. */
+const EXAM_CAPACITY = Object.fromEntries(
+  SKILL_AREA_KEYS.map((k) => [k, AREA_POOL[k].length]),
+) as Record<SkillAreaKey, number>;
+
+/**
+ * The per-area shape of a paper of `count` questions: exactly what `sampleExam`
+ * will draw, capacity included.
+ *
+ * The simulator's setup table renders this rather than rounding the weights a
+ * second time. `Math.round(weight × length)` is not the same function as
+ * largest-remainder allocation and the two need not agree — with five areas now
+ * sharing a weight, naive rounding shows six counts summing to 39 for a
+ * 40-question paper, under a column headed "Questions in this paper". One
+ * source, so the preview is the paper.
+ */
+export const paperShape = (count: number): Record<SkillAreaKey, number> =>
+  allocateByBlueprint(Math.max(0, count), EXAM_CAPACITY);
+
 export const sampleExam = (
   progress: ProgressMap,
   count: number,
@@ -304,10 +338,7 @@ export const sampleExam = (
 ): Question[] => {
   const rand = mulberry32(seed);
   const now = Date.now();
-  const capacity = Object.fromEntries(
-    SKILL_AREA_KEYS.map((k) => [k, AREA_POOL[k].length]),
-  ) as Record<SkillAreaKey, number>;
-  const alloc = allocateByBlueprint(Math.max(0, count), capacity);
+  const alloc = paperShape(count);
 
   const picked: Question[] = [];
   for (const area of SKILL_AREA_KEYS) {
