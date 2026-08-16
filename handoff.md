@@ -5,7 +5,7 @@ Branch `phase-2-app`, four commits past `main`:
 - `0006e17` scaffold + contracts + **the contentHash fix**
 - `757727f` wave 3 — store, scheduling, selectors, renderers
 - `3d8e0e8` wave 4 — drill loop, dashboard, simulator, export
-- wave 5 — the review, and the five defects it found
+- `7e0f560` wave 5 — the review, and the five defects it found
 
 **Wave 5 is done.** Jump to [Wave 5, as reviewed](#wave-5-as-reviewed) for what
 was found and what was deliberately left. **The branch is ready to merge to
