@@ -17,6 +17,13 @@ interface Props {
   phase: CardPhase;
   onChange: (verdict: SelfVerdict) => void;
   suppressFeedback?: boolean;
+  /**
+   * Lift the reveal out of this component when the caller drives it — the drill
+   * binds Enter to it, which is the only way 28% of the bank is operable without
+   * the mouse. Omit both and the card manages its own reveal, as it always did.
+   */
+  revealed?: boolean;
+  onReveal?: () => void;
 }
 
 const reasonFor = (q: Question): string => {
@@ -32,11 +39,26 @@ const reasonFor = (q: Question): string => {
   return 'No machine-checkable answer survived extraction, so this one is graded on your own recall.';
 };
 
-export function SelfGraded({ question, verdict, phase, onChange, suppressFeedback }: Props) {
+export function SelfGraded({
+  question,
+  verdict,
+  phase,
+  onChange,
+  suppressFeedback,
+  revealed,
+  onReveal,
+}: Props) {
   // Keyed on the question id so moving to the next card re-hides the answer
   // without the parent having to remount or reset anything.
   const [revealedFor, setRevealedFor] = useState<number | null>(null);
-  const showAnswer = !suppressFeedback && (phase === 'revealed' || revealedFor === question.id);
+  const showAnswer =
+    !suppressFeedback &&
+    (phase === 'revealed' || revealed === true || revealedFor === question.id);
+
+  const reveal = () => {
+    setRevealedFor(question.id);
+    onReveal?.();
+  };
 
   return (
     <div className="stack" style={{ gap: 12 }}>
@@ -53,7 +75,7 @@ export function SelfGraded({ question, verdict, phase, onChange, suppressFeedbac
         </p>
       ) : !showAnswer ? (
         <div>
-          <button type="button" className="btn btn-primary" onClick={() => setRevealedFor(question.id)}>
+          <button type="button" className="btn btn-primary" onClick={reveal}>
             Reveal answer
           </button>
         </div>

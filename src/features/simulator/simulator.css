@@ -1,0 +1,90 @@
+/*
+ * Exam simulator only. Tokens and primitives come from `src/styles.css`.
+ */
+
+.sim-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.timer {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.timer.is-low {
+  color: var(--warn);
+}
+
+.timer.is-out {
+  color: var(--bad);
+}
+
+/* Jump grid. In a timed paper the expensive move is hunting for the two you
+   skipped, so every question's state is on screen at once. */
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+  gap: 4px;
+}
+
+.sim-cell {
+  appearance: none;
+  font: inherit;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-dim);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.sim-cell:hover {
+  border-color: var(--border-strong);
+}
+
+.sim-cell.is-answered {
+  color: var(--text);
+  border-color: var(--border-strong);
+  background: color-mix(in srgb, var(--text-faint) 18%, var(--surface-2));
+}
+
+.sim-cell.is-flagged {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.sim-cell.is-current {
+  outline: 2px solid var(--info);
+  outline-offset: 1px;
+}
+
+.sim-cell.is-correct {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.sim-cell.is-wrong {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.sim-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.score-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,108 @@
+/*
+ * Drill only. The design system lives in `src/styles.css`; nothing here
+ * redefines a token, it only lays out this feature.
+ */
+
+.drill-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.pool {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ── The loop ────────────────────────────────────────────────────────────── */
+
+.drill-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.drill-head .counter {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+/* Segment per card, so the shape of the session is visible at a glance:
+   where you are, and which ones went wrong on the way here. */
+.drill-track {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+  min-width: 140px;
+  height: 6px;
+}
+
+.drill-track > span {
+  flex: 1;
+  border-radius: 1px;
+  background: var(--surface-2);
+}
+
+.drill-track > span.is-correct {
+  background: var(--ok);
+}
+.drill-track > span.is-wrong {
+  background: var(--bad);
+}
+.drill-track > span.is-current {
+  background: var(--accent);
+}
+
+.confidence {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.confidence .btn[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, var(--surface-2));
+  color: var(--text);
+}
+
+/* ── Summary ─────────────────────────────────────────────────────────────── */
+
+.summary-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.summary-figures > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.missed {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.missed li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 640px) {
+  .drill-head .counter {
+    order: -1;
+  }
+}

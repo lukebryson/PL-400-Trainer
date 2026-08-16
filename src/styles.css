@@ -331,6 +331,54 @@ textarea:focus-visible,
   outline-offset: 1px;
 }
 
+/* A labelled control. `.label` sits above, the input fills the column. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 170px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.check input {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* A single number worth reading from across the desk. */
+.figure {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.figure-lg {
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+.figure.is-ok {
+  color: var(--ok);
+}
+.figure.is-bad {
+  color: var(--bad);
+}
+.figure.is-warn {
+  color: var(--warn);
+}
+
 /* ── Options ─────────────────────────────────────────────────────────────── */
 
 .option {

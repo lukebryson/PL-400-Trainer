@@ -1,0 +1,122 @@
+/*
+ * Readiness dashboard only. Tokens and primitives come from `src/styles.css`.
+ */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.hero .verdict {
+  max-width: var(--measure);
+}
+
+/* 0–1000, with the 700 pass mark drawn on it. A projection without the bar it
+   has to clear is just a number. */
+.scale {
+  position: relative;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.scale > .fill {
+  display: block;
+  height: 100%;
+}
+
+.scale > .mark {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: var(--text-faint);
+}
+
+.rag-green .fill,
+.fill.rag-green {
+  background: var(--ok);
+}
+.rag-amber .fill,
+.fill.rag-amber {
+  background: var(--warn);
+}
+.rag-red .fill,
+.fill.rag-red {
+  background: var(--bad);
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.dot.rag-green {
+  background: var(--ok);
+}
+.dot.rag-amber {
+  background: var(--warn);
+}
+.dot.rag-red {
+  background: var(--bad);
+}
+
+.next-action {
+  border-left: 3px solid var(--accent);
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.stat-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Attempts a day, most recent fourteen. Bars, not a chart library. */
+.spark {
+  display: flex;
+  align-items: stretch;
+  gap: 3px;
+  height: 44px;
+}
+
+.spark > div {
+  flex: 1;
+  min-width: 4px;
+  background: var(--surface-2);
+  border-radius: 1px 1px 0 0;
+  position: relative;
+}
+
+.spark > div > span {
+  display: block;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 1px 1px 0 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.area-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

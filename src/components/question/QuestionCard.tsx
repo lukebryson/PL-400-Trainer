@@ -32,6 +32,12 @@ export interface QuestionCardProps extends QuestionRendererProps {
   onCaseStudyToggle?: (open: boolean) => void;
   /** Omit to render the dispute affordance read-only. */
   onCorrectionChange?: (correction: string | null) => void;
+  /**
+   * Self-graded reveal, lifted so the drill can bind it to a key. Omit both and
+   * the self-graded card manages its own reveal.
+   */
+  selfRevealed?: boolean;
+  onSelfReveal?: () => void;
 }
 
 const TYPE_LABEL: Record<string, string> = {
@@ -74,6 +80,8 @@ export function QuestionCard({
   caseStudyOpen,
   onCaseStudyToggle,
   onCorrectionChange,
+  selfRevealed,
+  onSelfReveal,
 }: QuestionCardProps) {
   const kind = responseKindFor(question);
   const dead = isDeadEnd(question);
@@ -147,6 +155,8 @@ export function QuestionCard({
           verdict={response.verdict}
           phase={phase}
           suppressFeedback={suppressFeedback}
+          revealed={selfRevealed}
+          onReveal={onSelfReveal}
           onChange={(verdict: SelfVerdict) => emit({ kind: 'self', verdict })}
         />
       ) : null}
