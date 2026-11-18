@@ -32,10 +32,23 @@ const pct = (n: number): string => `${Math.round(n * 100)}%`;
 /**
  * What an hour in this area buys. Both operands must come from the *same* area:
  * writing `b.weight * (1 - areaScore(a))` reads plausibly and is not a
- * comparator at all — it ranked a 32.5% area scoring 0.97 above a 12.5% area
+ * comparator at all — it ranked the dominant area scoring 0.97 above a light one
  * scoring 0.14, which is the opposite of the advice the table claims to give.
  */
 const shortfallValue = (a: AreaReadiness): number => a.weight * (1 - areaScore(a));
+
+/**
+ * Five of the six areas now carry the same blueprint weight, so an untouched
+ * board is a five-way tie on `shortfallValue` and the row order would otherwise
+ * fall out of whatever order `Object.keys` happened to give. Break it on what
+ * actually distinguishes the areas to a revising user — how much of the area is
+ * still unseen — and then on the label, so the table is fully determined and
+ * does not reshuffle between renders.
+ */
+const byValueThenUnseen = (a: AreaReadiness, b: AreaReadiness): number =>
+  shortfallValue(b) - shortfallValue(a) ||
+  b.total - b.attempted - (a.total - a.attempted) ||
+  a.label.localeCompare(b.label);
 
 const RAG_WORD: Record<Rag, string> = {
   green: 'would pass comfortably',
@@ -168,7 +181,7 @@ export function DashboardPage(_props: PageProps) {
           </thead>
           <tbody>
             {[...r.areas]
-              .sort((a, b) => shortfallValue(b) - shortfallValue(a))
+              .sort(byValueThenUnseen)
               .map((a) => (
                 <AreaRow key={a.area} area={a} />
               ))}

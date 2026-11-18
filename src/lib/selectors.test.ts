@@ -17,6 +17,7 @@ import {
   areaScore,
   dedupeByHash,
   dueQuestions,
+  paperShape,
   ragFor,
   readiness,
   sampleExam,
@@ -239,6 +240,35 @@ describe('sampleExam', () => {
       const sum = SKILL_AREA_KEYS.reduce((s, k) => s + alloc[k], 0);
       expect(sum).toBe(n);
       expect(sampleExam(new Map(), n, n)).toHaveLength(n);
+    }
+  });
+
+  /**
+   * The simulator's setup table renders `paperShape` under a column headed
+   * "Questions in this paper", so the column has to total the paper. It used to
+   * round the weights itself — a different function from largest-remainder
+   * allocation, and one that disagrees: with five areas sharing a weight,
+   * `Math.round(weight × 40)` gives six counts summing to 39.
+   */
+  it('shapes a paper that totals the paper length and matches what is drawn', () => {
+    for (const n of [40, 50, 60]) {
+      const shape = paperShape(n);
+      expect(SKILL_AREA_KEYS.reduce((s, k) => s + shape[k], 0)).toBe(n);
+
+      // And it is the allocation `sampleExam` actually draws, not a parallel one.
+      const drawn = sampleExam(new Map(), n, 7);
+      for (const area of SKILL_AREA_KEYS) {
+        expect(drawn.filter((q) => q.skillArea === area)).toHaveLength(shape[area]);
+      }
+
+      // Every row stays inside the band printed beside it — the defect that
+      // started this: integrations read 9 of 50 against a band of 10–15%.
+      for (const area of SKILL_AREA_KEYS) {
+        const pct = (shape[area]! / n) * 100;
+        const [lo, hi] = SKILL_AREAS[area].band;
+        expect(pct).toBeGreaterThanOrEqual(lo);
+        expect(pct).toBeLessThanOrEqual(hi);
+      }
     }
   });
 

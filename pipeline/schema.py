@@ -43,15 +43,23 @@ Confidence = Literal["high", "low"]
 
 TOTAL_QUESTIONS = 440
 
-#: March 2026 blueprint. Keys are fixed — simulator sampling and dashboard
-#: weighting both index on them. `weight` is the midpoint of the published band.
+#: Blueprint as of 19 March 2026, verified against the published study guide.
+#: Keys are fixed — simulator sampling and dashboard weighting both index on
+#: them. Must stay identical to `SKILL_AREAS` in `src/types.ts`; that file
+#: carries the full reasoning.
+#:
+#: `weight` is *not* the band midpoint. The published midpoints sum to 95%, not
+#: 100% — five areas at 12.5 plus one at 32.5 — so each is scaled by 1 / 0.95,
+#: giving 5/38 and 13/38, which sum to exactly 1 and leave every area inside its
+#: own band. Putting the whole 5pp residual on one area instead pushes that area
+#: out of the band printed beside it.
 SKILL_AREAS: dict[str, dict[str, Any]] = {
-    "technical-design": {"label": "Create a technical design", "band": (10, 15), "weight": 0.125},
-    "build-solutions": {"label": "Build Power Platform solutions", "band": (10, 15), "weight": 0.125},
-    "apps-improvements": {"label": "Implement Power Apps improvements", "band": (10, 15), "weight": 0.125},
-    "extend-ux": {"label": "Extend the user experience", "band": (10, 15), "weight": 0.125},
-    "extend-platform": {"label": "Extend the platform", "band": (30, 35), "weight": 0.325},
-    "integrations": {"label": "Develop integrations", "band": (10, 15), "weight": 0.175},
+    "technical-design": {"label": "Create a technical design", "band": (10, 15), "weight": 5 / 38},
+    "build-solutions": {"label": "Build Power Platform solutions", "band": (10, 15), "weight": 5 / 38},
+    "apps-improvements": {"label": "Implement Power Apps improvements", "band": (10, 15), "weight": 5 / 38},
+    "extend-ux": {"label": "Extend the user experience", "band": (10, 15), "weight": 5 / 38},
+    "extend-platform": {"label": "Extend the platform", "band": (30, 35), "weight": 13 / 38},
+    "integrations": {"label": "Develop integrations", "band": (10, 15), "weight": 5 / 38},
 }
 
 # ── Regexes ──────────────────────────────────────────────────────────────────

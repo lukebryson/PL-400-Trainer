@@ -2,17 +2,18 @@
 
 Exam: **Thursday 17 September 2026**, pass mark 700/1000.
 
-Branch `phase-2-app`, five commits past `main`:
+Phase 2 is **merged to `main`** (PR #1). The waves that built it:
 
 - `0006e17` scaffold + contracts + **the contentHash fix**
 - `757727f` wave 3 — store, scheduling, selectors, renderers
 - `3d8e0e8` wave 4 — drill loop, dashboard, simulator, export
 - `7e0f560` wave 5 — the review, and the five defects it found
-- `f0b0cdb` handoff pointer
 
-State: `npx tsc -b --force` clean, `npm run build` clean, `npx vitest run`
-**164 passing**. `npm run dev` works. **The branch is ready to merge to `main`**
-and nothing is known to be broken.
+Since the merge: the blueprint weights were renormalised against the published
+study guide — see [the blueprint weights](#the-blueprint-weights-decided).
+
+State: `npm run build` clean, `npx vitest run` **176 passing**. `npm run dev`
+works. Nothing is known to be broken.
 
 ### Which file to read
 
@@ -33,11 +34,8 @@ and nothing is known to be broken.
 Phase 2 is finished and reviewed. Nothing below is blocked on more building.
 In the order these earn their keep before 17 September:
 
-**1. Decide the `integrations` weight.** One line of `src/types.ts`, but it
-moves every score in the app, so it is a decision rather than a task. The case
-is written up under [one judgement call](#one-judgement-call-open--needs-a-decision-not-code).
-Do this first — it is cheap, and every drill session sat before it is decided
-records scores against the old weighting.
+**1. ~~Decide the `integrations` weight.~~ Decided and done** — see
+[the blueprint weights](#the-blueprint-weights-decided). Nothing outstanding.
 
 **2. Sit a real drill session and a real simulator paper.** This is the highest
 value thing left and it is not a coding task. Everything in the app is tested;
@@ -182,6 +180,9 @@ Asserted in `markdown.test.ts` against the real bank.
 - `DrillFilter.dueOnly` **defaults true**.
 - Renderers dispatch on `responseKindFor(q)`, **not** `question.type`.
 - Simulator budget is **two minutes a question**, scaling with paper length.
+- **Blueprint weights are the published band midpoints scaled by `1/0.95`** —
+  `5/38` and `13/38`. The midpoints sum to 95%, not 100%, and this is the only
+  way to absorb the residual with every area still inside its own band.
 
 ---
 
@@ -345,25 +346,56 @@ screen reader on reveal, because submitting moves no focus — there is now a
   nothing here has been driven by an actual screen reader or checked at 200%
   zoom. Static reading is not a substitute; treat this as unaudited.
 
-### One judgement call, open — needs a decision, not code
+### The blueprint weights, decided
 
-**`integrations` carries `weight: 0.175` against its own displayed band of
-10–15%.** The four light areas sit at 0.125 and `extend-platform` at 0.325, so
-the residual needed to reach 1.0 was dumped entirely on `integrations`. The
-simulator's setup table prints "Develop integrations · 10–15% · ~9 questions"
-for a 50-question paper — 9 of 50 is 17.5%, outside the band printed on the
-same row.
+**Settled. `integrations` no longer sits outside its band, and neither does
+anything else.** Do not reopen this.
 
-Not fixed, because every route out changes something real:
+Wave 5 framed it as a choice between three bad options and left it to the user.
+That framing had the wrong root cause. Checked against the published study guide
+(skills measured **as of 19 March 2026**, the version `types.ts` names), the
+bands in the code are all correct — and **the published midpoints sum to 95%,
+not 100%**: five areas at 12.5 plus `extend-platform` at 32.5. There is 5pp of
+residual that has to go *somewhere*, and the previous session had dumped the lot
+on `integrations`.
 
-- move the residual onto `extend-platform` (0.325 → 0.375) and it leaves *its*
-  band of 30–35%;
-- spread it across all six and every area drifts off its midpoint;
-- widen the printed band and the table stops being the blueprint.
+The route wave 5 missed is to scale every midpoint by the same factor, `1/0.95`:
 
-Changing any weight changes simulator sampling, `scaleScore` and every
-projected score already recorded. That is the user's call. Until it is made,
-the setup table shows a row that contradicts itself.
+| | weight | | band |
+| --- | --- | --- | --- |
+| five light areas | `5/38` | 13.16% | 10–15 |
+| `extend-platform` | `13/38` | 34.21% | 30–35 |
+
+`5 × 5/38 + 13/38 = 38/38`, exactly 1. Every area lands inside its own published
+band, and the relative weighting is untouched — `extend-platform` stays exactly
+2.6× each other area. None of the three options wave 5 listed has that property.
+
+Confirmed by measurement, not by eye: the simulator's setup table is now in band
+on every row at all three paper lengths (40, 50 and 60).
+
+Two consequences worth knowing, both handled:
+
+- **Ties are now the common case.** Five areas share a weight, so an untouched
+  board is a five-way tie on "what an hour buys" and the row order would
+  otherwise fall out of `Object.keys`. `DashboardPage.byValueThenUnseen` and
+  `selectors.nextAction` break it identically — most unseen first, then label —
+  because the page prints the next action directly above a table claiming the
+  same ordering.
+- **The setup table was rounding the weights a second time.**
+  `Math.round(weight × length)` is not largest-remainder allocation and the two
+  need not agree: under the new weights it showed six counts summing to **39**
+  for a 40-question paper, under a column headed "Questions in this paper". The
+  table now renders `selectors.paperShape`, the same allocation `sampleExam`
+  draws, so the preview is the paper.
+
+Pinned by `src/lib/blueprint.test.ts` (sum, bands, equal scaling, the 2.6×
+ratio) and by a new case in `selectors.test.ts`. The blueprint test was
+reverse-checked: with the old weights restored, three of its assertions fail,
+including the in-band one. `pipeline/schema.py` carries the same table and was
+changed to match — it must not drift from `src/types.ts`.
+
+Nothing had been drilled when this landed, so no recorded score was invalidated
+and no migration was needed. That will not be true next time.
 
 ### After wave 5
 

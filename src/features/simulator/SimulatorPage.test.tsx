@@ -61,12 +61,44 @@ afterEach(async () => {
   resetDbHandle();
 });
 
+/** The length the setup screen opens on — `useState(50)` in SimulatorPage. */
+const DEFAULT_PAPER = 50;
+
 describe('SimulatorPage', () => {
   it('states the blueprint before the clock starts', async () => {
     mount();
     await waitFor(() => expect(screen.getByRole('button', { name: 'Start the clock' })).toBeTruthy());
     expect(screen.getByText('Extend the platform')).toBeTruthy();
     expect(screen.getByText('30–35%')).toBeTruthy();
+  });
+
+  /**
+   * The setup table's third column is headed "Questions in this paper" and its
+   * second column prints the blueprint band. Both claims are checkable and both
+   * were false: `integrations` read ~9 of 50 against a band of 10–15%, and once
+   * the weights were renormalised the column stopped totalling the paper. This
+   * reads the rendered table rather than the selector, because the defect was
+   * always visible on screen and never in the arithmetic underneath.
+   */
+  it('prints a setup table that totals the paper and stays inside every band', async () => {
+    mount();
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Start the clock' })).toBeTruthy());
+
+    const rows = [...screen.getByRole('table').querySelectorAll('tbody tr')];
+    expect(rows).toHaveLength(6);
+
+    let total = 0;
+    for (const row of rows) {
+      const [, bandCell, countCell] = [...row.querySelectorAll('td')];
+      const [lo, hi] = bandCell!.textContent!.replace('%', '').split('–').map(Number);
+      const count = Number(countCell!.textContent!.trim());
+      expect(Number.isFinite(count)).toBe(true);
+      total += count;
+      const pct = (count / DEFAULT_PAPER) * 100;
+      expect(pct).toBeGreaterThanOrEqual(lo!);
+      expect(pct).toBeLessThanOrEqual(hi!);
+    }
+    expect(total).toBe(DEFAULT_PAPER);
   });
 
   it('serves a blueprint-sampled paper with a jump cell per question', async () => {

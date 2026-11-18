@@ -106,10 +106,15 @@ green light. Green is ≥ 0.75, amber ≥ 0.55.
 
 **Projected score** is `1000 × Σ(weight × areaScore)` across the six skill areas,
 weighted by the exam blueprint rather than by what the bank happens to contain — the
-dump is 30.2% `extend-platform` by accident, the exam is 32.5% by design, and it is
+dump is 30.2% `extend-platform` by accident, the exam is 34.2% by design, and it is
 the exam being predicted. The simulator's score uses the same weights but drops the
 coverage factor and renormalises over the areas actually asked, because a single
 paper should be marked on what it asked rather than on what you have not yet seen.
+
+The weights are the published band midpoints scaled by `1 / 0.95`. Microsoft's
+midpoints sum to 95%, not 100% — five areas at 12.5 plus `extend-platform` at 32.5 —
+and scaling all six is the only way to absorb the 5pp residual that leaves every area
+inside the band printed beside it. `src/lib/blueprint.test.ts` pins that.
 
 **Progress is keyed on a `contentHash`** of each question's content, never on its id
 or position in the file. That is what lets a corrected bank be reimported without

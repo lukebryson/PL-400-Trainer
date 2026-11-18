@@ -18,7 +18,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { QuestionCard, isMultiSelect } from '../../components/question';
 import { caseStudyFor, emptyResponse, isAnswered, responseKindFor } from '../../lib/bank';
 import { grade as gradeResponse } from '../../lib/grade';
-import { sampleExam } from '../../lib/selectors';
+import { paperShape, sampleExam } from '../../lib/selectors';
 import { useStorageStatus, useStore } from '../../lib/store';
 import { href, type PageProps } from '../../router';
 import {
@@ -390,6 +390,10 @@ function Setup({
   onStart: () => void;
   persistent: boolean;
 }) {
+  // The paper's real allocation, not a second rounding of the weights: the
+  // column is headed "Questions in this paper" and must therefore total the
+  // paper length.
+  const shape = paperShape(length);
   return (
     <main className="page page-narrow stack">
       <header className="stack" style={{ gap: 4 }}>
@@ -437,7 +441,7 @@ function Setup({
                   {SKILL_AREAS[k].band[0]}–{SKILL_AREAS[k].band[1]}%
                 </td>
                 <td className="num" style={{ textAlign: 'right' }}>
-                  ~{Math.round(SKILL_AREAS[k].weight * length)}
+                  {shape[k]}
                 </td>
               </tr>
             ))}

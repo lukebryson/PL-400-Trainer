@@ -11,7 +11,7 @@ import { questionsByArea } from '../../lib/bank';
 import { openDb, resetDbHandle } from '../../lib/db';
 import { readiness } from '../../lib/selectors';
 import { StoreProvider, useStore } from '../../lib/store';
-import type { Grade } from '../../types';
+import { SKILL_AREAS, type Grade } from '../../types';
 import { DashboardPage } from './DashboardPage';
 
 const wipe = (): Promise<void> =>
@@ -69,11 +69,15 @@ describe('DashboardPage', () => {
   it('lists every skill area with its blueprint weight', async () => {
     mount();
     await waitFor(() => expect(screen.getByTestId('projected')).toBeTruthy());
-    // `extend-platform` is the dominant band and must read as 33%, not as the
-    // bank's own 30.2% share.
+    // `extend-platform` is the dominant band and must read as its blueprint
+    // weight, not as the bank's own 30.2% share.
     expect(screen.getByText('Extend the platform')).toBeTruthy();
     expect(screen.getAllByRole('link', { name: 'Drill' })).toHaveLength(6);
-    expect(screen.getByText('33%')).toBeTruthy();
+    // Derived from the table rather than written out, so the weights can be
+    // renormalised without a test needing to be edited to agree with them.
+    const dominant = `${Math.round(SKILL_AREAS['extend-platform'].weight * 100)}%`;
+    expect(dominant).toBe('34%');
+    expect(screen.getByText(dominant)).toBeTruthy();
   });
 
   it('shows the same projection the selectors compute', async () => {
@@ -102,10 +106,14 @@ describe('DashboardPage', () => {
     const labels = [...rows].map((r) => r.querySelector('td')!.textContent!.trim());
     expect(labels).toHaveLength(6);
 
-    // Untouched and 17.5% of the paper: nothing else is worth more.
-    expect(labels[0]).toContain('Develop integrations');
-    // Answered 12 for 12: the largest weight, and now the smallest shortfall.
+    // The assertion that matters, and the one the crossed comparator failed:
+    // the area answered 12 for 12 is the heaviest in the blueprint and must
+    // still sink to the bottom, because its shortfall is now the smallest.
+    // Stated as position rather than as a weight, so renormalising the
+    // blueprint cannot quietly invalidate it.
     expect(labels[labels.length - 1]).toContain('Extend the platform');
+    // Everything above it is untouched, so all five are worth strictly more.
+    expect(labels.slice(0, 5)).not.toContain('Extend the platform');
     view.unmount();
   });
 
